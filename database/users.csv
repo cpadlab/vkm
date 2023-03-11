@@ -1,0 +1,2 @@
+email,username,password,path
+root@example.com,root,root,databases\users\root\vault.db
