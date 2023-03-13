@@ -11,7 +11,7 @@ function checkSession() {
     .then(result => {
         if (result.success  === true) {
             console.log(result.success)
-            document.getElementById('tittle').innerText = "Vault · " + result.user;
+            document.getElementById('tittle').innerText = "VKM | Vault · " + result.user;
         }
         else {
             window.location.href = 'http://localhost/vkm/templates/login.html';
