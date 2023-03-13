@@ -6,9 +6,13 @@ $url = $_POST["url"];
 $site = $_POST["site"];
 $password = $_POST["password"];
 
-$fileName = "inputsss.txt";
-$contentFile = "$ddbb $username $category $url $site $password";
-file_put_contents($fileName, $contentFile);
+$command = "python ../python/add-key.py $ddbb $username $category $url $site $password";
+$output = exec($command);
 
-echo json_encode(array("password" => $output));
+if (trim($output) == "True") {
+    echo json_encode(array("success" => true));
+} else {
+    echo json_encode(array("success" => false));
+}
+header('Content-Type: text/plain');
 ?>

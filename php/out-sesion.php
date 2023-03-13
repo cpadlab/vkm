@@ -1,7 +1,7 @@
 <?php
 
 $fileName = "vkm_tempSesion.ini";
-sleep(90);
+sleep(600);
 unlink($fileName);
 
 ?>

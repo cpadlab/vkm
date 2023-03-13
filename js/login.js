@@ -21,13 +21,13 @@ loginButton.addEventListener("click", (event) => {
   })
   .then(result => {
     console.log(result)
-    if (result.success  === true) {
+    if (result.success == true) {
       document.querySelector(".message2").style.display = "none";
-      const currentUser = username;
       fetch("../php/out-sesion.php", {})
-      window.location.href = "http://localhost/vkm/templates/index.html?username=" + encodeURIComponent(currentUser);
-    } else {
-      window.alert('Invalid login with user:' + $username);
+      window.location.href = "http://localhost/vkm/templates/index.html?username=" + encodeURIComponent(username);
+
+    }else{
+      window.alert('Invalid login with user.');
       document.querySelector(".message2").style.display = "block";
     }
   })

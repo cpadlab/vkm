@@ -19,13 +19,15 @@ hiddenFormBtn.addEventListener('click', () => {
 });
 
 function getDDBB() {
-    fetch("../php/sesion.php", {})
+    let user; 
+
+    return fetch("../php/sesion.php", {})
     .then(response => {
         return response.json();
     })
     .then(result => {
-        const user = result.user
-        return user
+        user = result.user; 
+        return user;
     });
 }
 
@@ -34,31 +36,37 @@ addToVaultBtn.addEventListener('click', () => {
     const passwordInput = document.getElementById("pswd-input");
     const siteInput = document.getElementById("siteInput");
     const urlInput = document.getElementById("urlInput");
-    const categorySelect = document.getElementById("categorySelect");
-    const ddbb = getDDBB();
+    const categorySelect = document.getElementById("categorySelect");  
+    getDDBB().then(ddbb => {
+        const ddbb1 = ddbb
+        const username = usernameInput.value || "none";
+        const password = passwordInput.value || "none";
+        const site = siteInput.value || "none";
+        const url = urlInput.value || "none";
+        const category = categorySelect.value || "none";
 
-    const username = usernameInput.value;
-    const password = passwordInput.value;
-    const site = siteInput.value;
-    const url = urlInput.value;
-    const category = categorySelect.value;
+        const formData = new FormData();
+            formData.append('ddbb', ddbb1);
+            formData.append('username', username);
+            formData.append('password', password);
+            formData.append('site', site);
+            formData.append('url', url);
+            formData.append('category', category);
 
-    const formData = new FormData();
-    formData.append('ddbb', ddbb);
-    formData.append('username', username);
-    formData.append('password', password);
-    formData.append('site', site);
-    formData.append('url', url);
-    formData.append('category', category);
-
-    console.log(ddbb)
-
-    fetch("../php/add-new.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => {
-      return response.json();
-    })
+        fetch("../php/add-new.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(result => {
+            console.log(result)
+            if (result.success == true){
+                window.location.href = "http://localhost/vkm/templates/vault.html";
+            }
+        })
+    });
 });
+
 

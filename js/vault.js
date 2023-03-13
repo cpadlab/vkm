@@ -31,13 +31,14 @@ function startVault(){
                     
                     const data = diccionary[site];
 
-                    console.log(data)
-
                     const divKey = document.createElement('div');
                     divKey.className = 'key-content';
                       
                     const divBanner = document.createElement('div');
                     divBanner.className = 'key-banner';
+                    const colors = ['#ff8400', '#ff007b', '#007bff'];
+                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    divBanner.style.backgroundColor = randomColor;
                       
                     const imgBanner = document.createElement('img');
                     imgBanner.src = '../imgs/padlock.png';
