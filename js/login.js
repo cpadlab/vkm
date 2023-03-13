@@ -24,9 +24,10 @@ loginButton.addEventListener("click", (event) => {
     if (result.success  === true) {
       document.querySelector(".message2").style.display = "none";
       const currentUser = username;
+      fetch("../php/out-sesion.php", {})
       window.location.href = "http://localhost/vkm/templates/index.html?username=" + encodeURIComponent(currentUser);
     } else {
-      window.alert('Invalid login with user: ', usernameInput);
+      window.alert('Invalid login with user:' + $username);
       document.querySelector(".message2").style.display = "block";
     }
   })

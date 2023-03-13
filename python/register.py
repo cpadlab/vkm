@@ -8,7 +8,7 @@
 # See proyect >> https://github.com/14wual/VKM2Login
 # Follow me >> https://twitter.com/codewual
 
-import sys, csv
+import sys, csv, sqlite3, os
 
 class Main:
     
@@ -37,6 +37,21 @@ class Main:
         with open('C:/xampp/htdocs/vkm/database/users.csv', 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerows(rows)
+            
+        path = os.path.join("C:/xampp/htdocs/vkm/database/users", username)
+        os.mkdir(path)
+            
+        path = os.path.join("C:/xampp/htdocs/vkm/database/users", username, "database.db")
+        conexion = sqlite3.connect(path)
+        cursor = conexion.cursor()
+        cursor.execute('''CREATE TABLE keys
+                            (user text, password text, site text)''')
+
+        cursor.execute("INSERT INTO keys VALUES ('usuario1', 'password1', 'sitio1')")
+        cursor.execute("INSERT INTO keys VALUES ('usuario2', 'password2', 'sitio2')")
+        conexion.commit()
+        conexion.close()
+
         
         return True
 

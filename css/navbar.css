@@ -20,6 +20,7 @@ ul {
 	padding: 0;
 	margin: 0;
 }
+
 .navbar {
 	background: #080808;
 	color: #fff;
@@ -74,4 +75,7 @@ button {
 	position: relative;
 	z-index: 20;
 	top: 65px;
+}
+img {
+	height: 20px;
 }

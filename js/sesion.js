@@ -2,14 +2,20 @@ function getUsernameFromURL() {
     var urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('username');
 }
+
+function checkSession() {
+    fetch("../php/sesion.php", {})
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        if (result.success  === true) {}
+        else {
+            window.location.href = 'http://localhost/vkm/templates/login.html';
+        }
+    })
+}
   
-var username = getUsernameFromURL();
-console.log(username)
+var access = checkSession();
 
-if (!username) {
-    window.location.href = 'http://localhost/vkm/templates/login.html';
-}
 
-if (username) {
-    document.getElementById("username").innerText = username;
-}

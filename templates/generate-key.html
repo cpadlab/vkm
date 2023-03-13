@@ -18,14 +18,16 @@
         <ul class="links">
             <li><a href="http://localhost/vkm/templates/index.html">Home</a></li>
             <li><a href="http://localhost/vkm/templates/generate-key.html">Generate Password</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="https://github.com/14wual/vkm/" target="_BLANK">Support Us</a></li>
+            <li><a href="http://localhost/vkm/templates/settings.html">Settings</a></li>
+            <li><a href="#"  onclick="loadLogOutScript()">Log out</a></li>
         </ul>
         <div class="right">
-            <button>Vault</button>
+            <button id="link-vault">Vault</button>
         </div>        
         
     </div>
-
+    
     <div class="login-page">
         <div class="form">
             <div class="label-output">
@@ -49,5 +51,13 @@
     <script src="http://localhost/vkm/js/generate-key.js"></script>
     <script src="http://localhost/vkm/js/copy-btn.js"></script>
     <script src="../js/navbar.js"></script>
+    <script src="../js/vault.js"></script>
+    <script>
+        function loadLogOutScript() {
+            var script = document.createElement('script');
+            script.src = '../js/log-out.js';
+            document.head.appendChild(script);
+        }        
+    </script>
 </body>
 </html>
