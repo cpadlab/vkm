@@ -27,18 +27,57 @@
         
     </div>
 
-    <button class="fixed-button">+ Add new key</button>
+    <button class="fixed-button" onclick="addnewKY()" id="show-form-btn">+ Add new key</button>
     
     <script src="../js/sesion.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/vault.js"></script>
+
+    <div class="blackout"></div>
+
+    <div class="ank-panel">
+        <div class="ank-inputs">
+            <div class="ank-inputs-site">
+                <label for="">Site: </label>
+                <input type="text" placeholder="site-example" id="siteInput">
+                <br>
+                <label for="">URL: </label>
+                <input type="text" placeholder="example.com" id="urlInput">
+            </div>
+            <div class="ank-inputs-data">
+                <label for="">Username: </label>
+                <input type="text" placeholder="user-example" id="user-input">
+                <br>
+                <label for="">Password: </label>
+                <input type="password" placeholder="pswd-example" id="pswd-input">
+            </div>
+            <div class="ank-select-cat">
+                <label for="" id="categorySelect">Category: </label>
+                <select id="options">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="ak-btns">
+            <button id="hidden-form-btn">Cancel</button>
+            <button id="add-nw-key-event">Add to Vault</button>
+        </div>
+    </div>
 
     <script>
         function loadLogOutScript() {
             var script = document.createElement('script');
             script.src = '../js/log-out.js';
             document.head.appendChild(script);
-        }        
+        }   
+        
+        function addnewKY() {
+            var script = document.createElement('script');
+            script.src = '../js/add-new.js';
+            document.head.appendChild(script);
+        }  
     </script>
 </body>
 </html>

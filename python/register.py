@@ -45,10 +45,10 @@ class Main:
         conexion = sqlite3.connect(path)
         cursor = conexion.cursor()
         cursor.execute('''CREATE TABLE keys
-                            (user text, password text, site text)''')
+                            (user text, password text, site text, url text, category text)''')
 
-        cursor.execute("INSERT INTO keys VALUES ('usuario1', 'password1', 'sitio1')")
-        cursor.execute("INSERT INTO keys VALUES ('usuario2', 'password2', 'sitio2')")
+        cursor.execute("INSERT INTO keys VALUES ('usuario1', 'password1', 'sitio1', 'none', 'default')")
+        cursor.execute("INSERT INTO keys VALUES ('usuario2', 'password2', 'sitio2', 'none', 'default')")
         conexion.commit()
         conexion.close()
 

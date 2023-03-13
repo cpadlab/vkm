@@ -68,14 +68,14 @@ function startVault(){
                     btnSettings.id = 'key-sett-btn';
                     const imgSettings = document.createElement('img');
                     imgSettings.id = 'key-sett-btn-img';
-                    imgSettings.src = '../imgs/settings.png';
+                    imgSettings.src = 'http://localhost/vkm/imgs/settings.png';
                     btnSettings.appendChild(imgSettings);
 
                     const btnDelete = document.createElement('button');
                     btnDelete.id = 'key-delete-btn';
                     const imgDelete = document.createElement('img');
                     imgDelete.id = 'key-delete-btn-img';
-                    imgDelete.src = '../imgs/trash.png';
+                    imgDelete.src = 'http://localhost/vkm/imgs/trash.png';
                     btnDelete.appendChild(imgDelete);
                       
                     divInfo.appendChild(pSite);

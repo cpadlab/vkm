@@ -1,4 +1,2 @@
 email,username,password,path
-root@example.com,root,root,databases\users\root\vault.db
-1234,example,1234,databases/users/example/vault.db
-example,example,example,databases/users/example/vault.db
+root,root,root,databases/users/root/vault.db
