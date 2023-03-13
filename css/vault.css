@@ -1,0 +1,60 @@
+
+.key-content {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    margin: 5px 10px 10px 10px;
+    width: 250px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.key-banner {
+    background: #000;
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    height: 75px;
+}
+.key-banner img {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    z-index: 0;
+}
+
+.key-banner button {
+    display: none;
+    z-index: 111;
+    background: #fff;
+    cursor: pointer;
+    transition: all ease-in 1s;
+    animation: all ease-in 1s;
+}
+
+.key-content:hover > .key-banner button {
+    display: block;
+}
+
+.key-info {
+    margin-left: 10px;
+}
+
+.key-info #key-site {
+    font-weight: bold;
+    color: #465e7b;
+}
+
+.key-info #key-user {
+    margin-top: -20px;
+}
+
+/*
+divKey.className = 'key-content';
+divBanner.className = 'key-banner';
+btnCopy.id = 'key-copy-btn';
+divInfo.className = 'key-info';
+pSite.id = 'key-site';
+pUser.id = 'key-user';*/

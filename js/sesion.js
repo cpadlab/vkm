@@ -9,7 +9,10 @@ function checkSession() {
         return response.json();
     })
     .then(result => {
-        if (result.success  === true) {}
+        if (result.success  === true) {
+            console.log(result.success)
+            document.getElementById('tittle').innerText = "Vault · " + result.user;
+        }
         else {
             window.location.href = 'http://localhost/vkm/templates/login.html';
         }
