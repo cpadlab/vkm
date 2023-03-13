@@ -26,7 +26,7 @@ loginButton.addEventListener("click", (event) => {
     const formData = new FormData();
     formData.append('username', username);
     formData.append('password', password);
-    formData.append('email', password);
+    formData.append('email', email);
 
     fetch("../php/register.php", {
         method: "POST",

@@ -51,7 +51,7 @@ addToVaultBtn.addEventListener('click', () => {
     formData.append('url', url);
     formData.append('category', category);
 
-    console.log(formData)
+    console.log(ddbb)
 
     fetch("../php/add-new.php", {
         method: "POST",
