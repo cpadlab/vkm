@@ -22,7 +22,7 @@
 .ak-btns {display: flex;justify-content: flex-end;margin-top: 10px;}
 .ak-btns button {padding: 5px 10px;border-radius: 5px;border: none;background-color: #007bff;color: #fff;cursor: pointer;margin-left: 10px;}
 .ak-btns button:first-child {background-color: #e9ecef;color: #000;}
-body {transition: opacity 0.5s ease-in-out;}
+body {transition: opacity 0.5s ease-in-out;background: #24283b;}
 .search-bar {width: 85%;font-family: "Roboto", sans-serif;outline: 0;background: #f2f2f2;border: 0;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;margin-bottom: 10px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);align-items: center;}
 .search-btn{font-family: "Roboto", sans-serif;outline: 0;background: #007bff;border: 0;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;margin-bottom: 10px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);align-items: center;width: 100px;color: #fff;}
 .categories-selector{outline: 0;background: #f2f2f2;border: 0;;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);}
