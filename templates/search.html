@@ -7,6 +7,7 @@
     <title id="tittle">Vault</title>
     <link rel="stylesheet" href="http://localhost/vkm/css/navbar.css">
     <link rel="stylesheet" href="http://localhost/vkm/css/vault.css">
+    <link rel="stylesheet" href="http://localhost/vkm/css/no-content.css">
 </head>
 <body>
     <div class="navbar">
@@ -26,7 +27,15 @@
         </div>        
         
     </div>
-
+    
+    <select id="options">
+        <option value="default">default</option>
+        <option value="social-network">social network</option>
+        <option value="shopping">shopping</option>
+        <option value="mails">mails</option>
+        <option value="webs">webs</option>
+        <option value="others">others</option>
+    </select>
     <input type="text" class="search-bar" id="search-bar">
     <button class="search-btn" onclick="searchBTNSRC()">Search</button>
     <br>
@@ -36,6 +45,8 @@
     <script src="../js/sesion.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/search-item.js"></script>
+    <script src="../js/btn-vault.js"></script>
+    <script src="../js/search-content.js"></script>
 
     <div class="blackout"></div>
 
@@ -58,9 +69,12 @@
             <div class="ank-select-cat">
                 <label for="" id="categorySelect">Category: </label>
                 <select id="options">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="default">default</option>
+                    <option value="social-network">social network</option>
+                    <option value="shopping">shopping</option>
+                    <option value="mails">mails</option>
+                    <option value="webs">webs</option>
+                    <option value="others">others</option>
                 </select>
             </div>
         </div>
@@ -88,6 +102,8 @@
             script.src = '../js/search-btn.js';
             document.head.appendChild(script);
         }  
+
+        
     </script>
 </body>
 </html>
