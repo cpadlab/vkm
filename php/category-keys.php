@@ -1,6 +1,6 @@
 <?php
 $database = $_POST["database"];
-$search = $_POST["category"];
+$category = $_POST["category"];
 
 $command = "python ../python/category.py $database $category";
 $output = exec($command);

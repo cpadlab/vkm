@@ -10,18 +10,20 @@ function startVault(){
         return response.json();
     })
     .then(result => {
-        const category = getSearchFromURL();
-        const database = result.user;
-        const formData = new FormData();
-        formData.append('database', database);
-        formData.append('category', category);
 
         if (result.success  === true) {
+            const category = getSearchFromURL();
+            const database = result.user;
+            const formData = new FormData();
+            formData.append('database', database);
+            formData.append('category', category);
+
             fetch("../php/category-keys.php", {
                 method: "POST",
                 body: formData
             })
             .then(response => {
+                console.log(response)
                 return response.json();
             })
             .then(response => {
@@ -40,7 +42,7 @@ function startVault(){
                     keyContent.appendChild(br1);
 
                     const p1 = document.createElement('p');
-                    p1.textContent = 'No results for ' + search;
+                    p1.textContent = 'No keys in ' + category;
                     keyContent.appendChild(p1);
 
                     const buttonsDiv = document.createElement('div');
@@ -78,10 +80,56 @@ function startVault(){
                         
                         const divBanner = document.createElement('div');
                         divBanner.className = 'key-banner';
-                        const colors = ['#ff8400', '#ff007b', '#007bff'];
-                        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                        divBanner.style.backgroundColor = randomColor;
-                        
+                        const formData = new FormData();
+                        formData.append('database', database);
+                        formData.append('site', site);
+                        formData.append('user', data[0]);
+                        formData.append('password', data[1]);
+
+                        fetch("../php/category-color.php", {
+                            method: "POST",
+                            body: formData
+                        })
+                        .then(response => {
+                            return response.json();
+                        })
+                        .then(response => {
+
+                            if (response.category && response.category == "default"){
+                                const color = "#007bff";
+                                divBanner.style.backgroundColor = color;
+                            }
+                            else if (response.category && response.category == "social network"){
+                                const color = "#f00377";
+                                divBanner.style.backgroundColor = color;
+                            }
+                            else if (response.category && response.category == "shopping"){
+                                const color = "#00b35c";
+                                divBanner.style.backgroundColor = color;
+                            }
+                            else if (response.category && response.category == "mails"){
+                                const color = "#c41421";
+                                divBanner.style.backgroundColor = color;
+                            }
+                            else if (response.category && response.category == "webs"){
+                                const color = "#f07e04";
+                                divBanner.style.backgroundColor = color;
+                            }
+                            else if (response.category && response.category == "others"){
+                                const color = "#c41421";
+                                divBanner.style.backgroundColor = color;
+                            }
+                            else {
+                                const colorError = "#656875";
+                                divBanner.style.backgroundColor = colorError;
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error)
+                            colorError = "#656875"
+                            divBanner.style.backgroundColor = colorError;
+                        });
+                    
                         const imgBanner = document.createElement('img');
                         imgBanner.src = '../imgs/padlock.png';
                         
