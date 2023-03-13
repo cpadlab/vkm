@@ -45,6 +45,10 @@ function startVault(){
                     const btnCopy = document.createElement('button');
                     btnCopy.id = 'key-copy-btn';
                     btnCopy.textContent = "Copy";
+                    btnCopy.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        navigator.clipboard.writeText(data[1])
+                    })
                       
                     const divInfo = document.createElement('div');
                     divInfo.className = 'key-info';
@@ -56,9 +60,31 @@ function startVault(){
                     const pUser = document.createElement('p');
                     pUser.id = 'key-user';
                     pUser.textContent = data[0];
+
+                    const divInfoBTN = document.createElement('div');
+                    divInfoBTN.className = 'key-info-btn';
+
+                    const btnSettings = document.createElement('button');
+                    btnSettings.id = 'key-sett-btn';
+                    const imgSettings = document.createElement('img');
+                    imgSettings.id = 'key-sett-btn-img';
+                    imgSettings.src = '../imgs/settings.png';
+                    btnSettings.appendChild(imgSettings);
+
+                    const btnDelete = document.createElement('button');
+                    btnDelete.id = 'key-delete-btn';
+                    const imgDelete = document.createElement('img');
+                    imgDelete.id = 'key-delete-btn-img';
+                    imgDelete.src = '../imgs/trash.png';
+                    btnDelete.appendChild(imgDelete);
                       
                     divInfo.appendChild(pSite);
                     divInfo.appendChild(pUser);
+
+                    divInfoBTN.appendChild(btnSettings);
+                    divInfoBTN.appendChild(btnDelete);
+
+                    divInfo.appendChild(divInfoBTN);
                       
                     divBanner.appendChild(imgBanner);
                     divBanner.appendChild(btnCopy);
