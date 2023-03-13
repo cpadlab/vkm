@@ -127,6 +127,57 @@ function startVault(){
                     const imgDelete = document.createElement('img');
                     imgDelete.id = 'key-delete-btn-img';
                     imgDelete.src = 'http://localhost/vkm/imgs/trash.png';
+                    btnDelete.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        const blackoutDiv = document.createElement("div");
+                        const confirmDeleteDiv = document.createElement("div");
+                        const messageP = document.createElement("p");
+                        const buttonsDiv = document.createElement("div");
+                        const yesButton = document.createElement("button");
+                        yesButton.addEventListener('click', () => {
+                            const formData = new FormData();
+                            formData.append('database', database);
+                            formData.append('user', data[0]);
+                            formData.append('password', data[1]);
+                            formData.append('site', site);
+
+                            fetch("../php/delete-key.php", {
+                                method: "POST",
+                                body: formData
+                            })
+                            .then(response => {
+                                return response.json();
+                            })
+                            .then(result => {
+                                if (result.success == true){
+                                    const str = "Removed site(" + site + ") with user(" + data[0] + ")"
+                                    window.alert(str);
+                                    location.reload();
+                                }
+                            })
+                        });
+                        const cancelButton = document.createElement("button");
+                        cancelButton.addEventListener('click', () => {
+                            confirmDeleteDiv.style.display = 'none';
+                            blackoutDiv.style.display = 'none';
+                        });
+
+                        blackoutDiv.className = "blackout2";
+                        blackoutDiv.style.display = 'block';
+                        confirmDeleteDiv.style.display = 'block';
+                        confirmDeleteDiv.className = "confirm-delete";
+                        messageP.textContent = "Are you sure you want to delete: ?";
+                        yesButton.textContent = "Yes";
+                        yesButton.id = "buttonYES";
+                        cancelButton.textContent = "Cancel";
+
+                        confirmDeleteDiv.appendChild(messageP);
+                        buttonsDiv.appendChild(yesButton);
+                        buttonsDiv.appendChild(cancelButton);
+                        confirmDeleteDiv.appendChild(buttonsDiv);
+                        document.body.appendChild(blackoutDiv);
+                        document.body.appendChild(confirmDeleteDiv);
+                    })
                     btnDelete.appendChild(imgDelete);
                       
                     divInfo.appendChild(pSite);
