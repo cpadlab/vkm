@@ -1,4 +1,5 @@
 email,username,password,path
+<<<<<<< HEAD
 root,root,root,databases/users/root/vault.db
 none,root,cpadlab@gmail.com,databases/users/root/vault.db
 none,root,cpadlab@gmail.com,databases/users/root/vault.db
@@ -27,3 +28,6 @@ none,root,EFCDAXº,databases/users/root/vault.db
 none,root,none,databases/users/root/vault.db
 none,root,ewdsax,databases/users/root/vault.db
 cpadlab@gmail.com,wual,Hbntvl135246,databases/users/wual/vault.db
+=======
+
+>>>>>>> d7e87290892749fa7af9fa40aeda6df676be3d9c
