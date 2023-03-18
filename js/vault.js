@@ -268,6 +268,26 @@ function startVault(){
                         const button2 = document.createElement('button');
                         button2.id = 'save-newdata-event';
                         button2.innerHTML = 'Save';
+                        button2.addEventListener("click", (event) => {
+                            event.preventDefault();
+                            const formData = new FormData();
+                            formData.append('database', database);
+                            formData.append('user', input3);
+                            formData.append('username', data[0]);
+                            formData.append('password', input4);
+                            formData.append('nwsite', input1);
+                            formData.append('site', site);
+                            formData.append('url', input2);
+                            formData.append('cat', select1.value);
+                            fetch("../php/save-data.php", {
+                                method: "POST",
+                                body: formData
+                            })
+                            .then(response => {
+                                return response.json();
+                            })
+                            .then(response => {})
+                        })
 
                         div6.appendChild(label5);
                         select1.appendChild(option1);
