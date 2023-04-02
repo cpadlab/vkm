@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKM | Login</title>
+</head>
+<body>
+    <header></header>
+    <div class="login-content">
+        <div class="login-banner">
+
+        </div>
+        <div class="login-inputs">
+            <input type="text" name="" id="login-username" placeholder="Username">
+            <input type="password" name="" id="login-password" placeholder="Password">
+        </div>
+        <div class="login-btn">
+            <button  onclick="_loginEvent()">Login</button>
+            <script>
+                function _loginEvent(){
+                    var script = document.createElement('script');
+                    script.src = '../js/login.js';
+                    document.head.appendChild(script);
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

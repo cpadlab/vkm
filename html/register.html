@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKM | Register</title>
+</head>
+<body>
+    <header></header>
+    <div class="register-content">
+        <div class="register-banner">
+
+        </div>
+        <div class="register-inputs">
+            <input type="text" name="" id="register-name" placeholder="Name">
+            <input type="text" name="" id="register-surname" placeholder="Surname">
+            <input type="text" name="" id="register-username" placeholder="Username">
+            <input type="mail" name="" id="register-mail" placeholder="E-mail">
+            <input type="password" name="" id="register-password" placeholder="Password">
+            <input type="password" name="" id="register-rep-password" placeholder="Repeat Password">
+        </div>
+        <div class="register-btn">
+            <button  onclick="_registerEvent()">Register</button>
+            <script>
+                function _registerEvent(){
+                    var script = document.createElement('script');
+                    script.src = '../js/register.js';
+                    document.head.appendChild(script);
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
