@@ -29,5 +29,5 @@ class Register:
         'Create the table user vault ' > 'site', 'url', 'username', 'password', 'category',
         'If ALL True, Skip Warning Alert' > 'Download the recovery-token file [.key]',
         'FINISH',
-        'Redirects to' > '14wual.github.com/vkm/thanks.php?u=$username',
+        'Redirects to' > 'setup-user.html',
     }
