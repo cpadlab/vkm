@@ -31,3 +31,21 @@ class Register:
         'FINISH',
         'Redirects to' > 'setup-user.html',
     }
+
+
+"""
+setup de la ddbb de users.squilet:
+
+import sqlite3
+conn = sqlite3.connect('users.sqlite3')
+cursor = conn.cursor()
+cursor.execute('''
+            CREATE TABLE users (
+                code INTEGER,
+                username TEXT,
+                path TEXT
+            )
+        ''')
+conn.commit()
+conn.close()
+"""

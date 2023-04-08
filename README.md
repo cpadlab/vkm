@@ -8,7 +8,7 @@
 ```
 HTML: 99%
 CSS: 0%
-JS: 60%
-PHP: 100% - In testing
-Python: 100% - In testing
+JS: 60% - Finishing
+PHP: 100%
+Python: 100%
 ```

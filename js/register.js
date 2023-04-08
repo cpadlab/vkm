@@ -6,24 +6,31 @@ const register_password = document.getElementById("register-password");
 const register_rep_password = document.getElementById("register-rep-password");
 
 function checkPasswords(password_1, password_2) {
-    if (password_1 === password_2) {
+    if (password_1.value === password_2.value) {
         return true;
     } else {
         return false;
     }
   }
 
-if (checkPasswords(register_password.value, register_rep_password.value) == true) {
+if (checkPasswords(register_password, register_rep_password) == true) {
 
+    const name = register_name.value ? register_name.value : 'None';
+    const surname = register_surname.value ? register_surname.value : 'None';
+    const username = register_username.value ? register_username.value : 'None';
+    const mail = register_mail.value ? register_mail.value : 'None';
+    const password = register_password.value ? register_password.value : 'None';
+    const rep_password = register_rep_password.value ? register_rep_password.value : 'None';
+    
     const formRegisterData = new FormData();
-      formRegisterData.append('name',register_name.value);
-      formRegisterData.append('surname',register_surname.value);
-      formRegisterData.append('username',register_username.value);
-      formRegisterData.append('mail',register_mail.value);
-      formRegisterData.append('password',register_password.value);
-      formRegisterData.append('rep_password',register_rep_password.value);
+    formRegisterData.append('name', name);
+    formRegisterData.append('surname', surname);
+    formRegisterData.append('username', username);
+    formRegisterData.append('mail', mail);
+    formRegisterData.append('password', password);
+    formRegisterData.append('rep_password', rep_password);
 
-    fetch("../php/trans-register.php", {
+    fetch("../php/tr.register.php", {
         method: "POST",
         body: formRegisterData
     })
@@ -33,4 +40,6 @@ if (checkPasswords(register_password.value, register_rep_password.value) == true
     .then(result => {
       console.log(result)
     })
+} else {
+  console.log("Pass Mal")
 }
