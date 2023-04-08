@@ -1,0 +1,11 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+  
+.card:not(:first-child) {
+    display: none;
+}
