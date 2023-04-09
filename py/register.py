@@ -85,7 +85,7 @@ class Main:
             code_user,
             encrypt(argsv.register_name,key).decode(),
             encrypt(argsv.register_surname,key).decode(),
-            encrypt(argsv.register_username,key).decode(),
+            argsv.register_username,
             encrypt(argsv.register_mail,key).decode(),
             encrypt(argsv.register_password,key).decode(),
             encrypt(token,key).decode(),
@@ -129,6 +129,7 @@ class Main:
         user_parser.set(argsv.register_username, 'username', argsv.register_username)
         user_parser.set(argsv.register_username, 'last', 'never')
         user_parser.set(argsv.register_username, 'status', 'active')
+        user_parser.set(argsv.register_username, 'left', '5')
         
         user_parser.write(open(user_ini, 'w'))
         
