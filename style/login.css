@@ -14,8 +14,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.register-text {
+#releft {
+  font-size: 14px;
+  color: #bb2020;
+}
+.login-btn {
   margin-top: 20px;
+}
+.register-text {
   text-align: center;
   color: #94a1b2;
   font-size: 14px;

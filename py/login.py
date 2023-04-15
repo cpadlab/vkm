@@ -78,22 +78,19 @@ class Main:
                     from datetime import datetime
 
                     user_parser.set(argsv.login_username, 'left', '5')
-                    user_parser.set(argsv.login_username, 'last', datetime.now())
+                    user_parser.set(argsv.login_username, 'last', str(datetime.now()))
                     user_parser.write(open(user_ini, 'w'))
 
                     with open('../temp/sesion.tmp', 'w') as login_file: 
-                        login_file.write(f"""
-[Login]
-Username = {argsv.login_username}
+                        login_file.write(f"""[Sesion]
+username = {argsv.login_username}
 Start_at = {datetime.now()}""")
 
                     print(True)
 
                 else:
 
-                    #Esto no funciona.
-
-                    left = user_parser.get(argsv.login_username, 'left')
+                    left = int(user_parser.get(argsv.login_username, 'left'))
                     nwleft = str(left-1)
 
                     if int(nwleft) <= 0:
