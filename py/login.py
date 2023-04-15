@@ -37,17 +37,17 @@ class Token:
     
 class Check:
 
-    def exists(username, ddbb):
+    def exists(username, ddbb='../sqlite3/users/users.sqlite3'):
 
         conn = sqlite3.connect(ddbb)
         c = conn.cursor()
 
         c.execute("SELECT COUNT(*) FROM users WHERE username = ?", (username,))
 
-        result = c.fetchone()[0]
+        result = c.fetchone()
         conn.close()
 
-        if result == 1:return True
+        if result[0] == 1:return True
         else: return False
 
 class Main:
@@ -75,17 +75,28 @@ class Main:
 
                 if argsv.login_password == ddbbpassword:
 
+                    from datetime import datetime
+
                     user_parser.set(argsv.login_username, 'left', '5')
+                    user_parser.set(argsv.login_username, 'last', datetime.now())
                     user_parser.write(open(user_ini, 'w'))
+
+                    with open('../temp/sesion.tmp', 'w') as login_file: 
+                        login_file.write(f"""
+[Login]
+Username = {argsv.login_username}
+Start_at = {datetime.now()}""")
 
                     print(True)
 
                 else:
 
-                    left = user_parser.get(argsv.login_username, 'left')
-                    nwleft = left-1
+                    #Esto no funciona.
 
-                    if nwleft == 0:
+                    left = user_parser.get(argsv.login_username, 'left')
+                    nwleft = str(left-1)
+
+                    if int(nwleft) <= 0:
                         user_parser.set(argsv.login_username, 'status', 'block')
                     user_parser.set(argsv.login_username, 'left', nwleft) 
 

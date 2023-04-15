@@ -25,7 +25,7 @@ switch(trim($output)) {
         $errors[] = "Password is incorrect";
         break;
     default:
-        $errors[] = "Unknown response from server";
+        $errors[] = "Unknown response from server" + $output;
 }
 
 $response = array("success" => $success);

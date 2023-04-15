@@ -118,7 +118,7 @@ class Main:
             VALUES (?, ?, ?)
         ''', (
             code_user,
-            argsv.register_surname,
+            argsv.register_username,
             user_path
         ))
         

@@ -16,7 +16,8 @@ function checkPasswords(password_1, password_2) {
 
 if (checkPasswords(register_password, register_rep_password) == true) {
 
-    document.querySelector('button').innerHTML = 'Processing...';
+    document.getElementById("btnnn-reg").innerHTML = 'Processing...';
+    
     setTimeout(function() {
       const name = register_name.value ? register_name.value : 'None';
       const surname = register_surname.value ? register_surname.value : 'None';
@@ -45,7 +46,7 @@ if (checkPasswords(register_password, register_rep_password) == true) {
             alert("An error has occurred.");
             location.href = "register.html";        
           } else {
-            alert(username + " Registered Successfully");
+            alert(name + " Registered Successfully");
             location.href = "setup.html?account=" + username;
           }
       })

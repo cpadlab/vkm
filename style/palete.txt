@@ -1,0 +1,5 @@
+Background #16161a
+El headline: #fffffe
+Parrafo: #94a1b2
+Botom: #7f5af0
+Texto del boton: #fffffe

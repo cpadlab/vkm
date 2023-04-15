@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VKM | Login</title>
+    <link rel="stylesheet" href="../style/login.css">
 </head>
 <body>
-    <header></header>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo">
+              <h2>VKM</h2>
+            </div>
+            <ul class="links">
+              <li><a target="_blank" href="../index.html">Home</a></li>
+              <li><a target="_blank" href="#">Support</a></li>
+              <li><a target="_blank" href="#">About</a></li>
+              <li><a target="_blank" href="#">Code</a></li>
+            </ul>
+            <div class="right"><button>Vault</button></div>
+          </div>
+          <link rel="stylesheet" href="../style/navbar.css">
+          <script src="../js/navbar.js"></script>
+    </header>
+
     <div class="login-content">
         <div class="login-banner">
-
+            <h1>Login</h1>
         </div>
         <div class="login-inputs">
             <input type="text" name="" id="login-username" placeholder="Username">
@@ -19,7 +37,7 @@
         <p id="releft"></p>
         <script src="../js/returnLeft.js"></script>
         <div class="login-btn">
-            <button  onclick="_loginEvent()">Login</button>
+            <button  onclick="_loginEvent()" id="btnnn-log">Login</button>
             <script>
                 function _loginEvent(){
                     var script = document.createElement('script');
@@ -27,6 +45,9 @@
                     document.head.appendChild(script);
                 }
             </script>
+        </div>
+        <div class="register-text">
+            <p>Don't have an account? <a href="register.html">Register</a></p>
         </div>
     </div>
 </body>

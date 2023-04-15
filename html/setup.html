@@ -15,6 +15,22 @@
     <link rel="stylesheet" href="../style/setup.css">
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+              <h2>VKM</h2>
+            </div>
+            <ul class="links">
+              <li><a target="_blank" href="../index.html">Home</a></li>
+              <li><a target="_blank" href="#">Support</a></li>
+              <li><a target="_blank" href="#">About</a></li>
+              <li><a target="_blank" href="#">Code</a></li>
+            </ul>
+            <div class="right"><button>Vault</button></div>
+          </div>
+          <link rel="stylesheet" href="../style/navbar.css">
+          <script src="../js/navbar.js"></script>
+    </header>
     <div class="card">
         <h2 id="welcome-h2"></h2>
         <p id="welcome-p"></p>
@@ -41,7 +57,9 @@
             document.getElementById("step2-p").innerHTML = account_username + ", download the recovery file. If you lose your password, you can recover your account with this file!";            
         </script>
     </div>
-    <button onclick="nextCard()" id="btm-nxt">Siguiente</button>
+    <div class="butoms-divvs" style="margin-top: 30px; display: flex; justify-content: center;">
+        <button onclick="nextCard()" id="btm-nxt">Siguiente</button>
+    </div>
     <script src="../js/setup.js"></script>
 </body>
 </html>
