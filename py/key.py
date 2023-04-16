@@ -14,13 +14,20 @@ class Main:
         conn = sqlite3.connect(username)
         c = conn.cursor()
 
-        key = [fila[0] for fila in c.execute("SELECT key FROM info")]
+        key = [fila for fila in c.execute("SELECT key FROM info")][0][0]
+        
         results = c.execute("SELECT code, site, username, password, url, category FROM vault").fetchall()
 
         dic = {}
 
         for row in results:
-            dic[row[4]] = (row[0], decrypt(row[1],key), decrypt(row[3],key), decrypt(row[4],key), decrypt(row[2],key), row[5])
+            
+            dic[str(decrypt(row[1],key))] = (row[0],
+                            str(decrypt(row[1],key)),
+                            str(decrypt(row[3],key)), 
+                            str(decrypt(row[4],key)), 
+                            str(decrypt(row[2],key)), 
+                            row[5])
 
         conn.close()
 

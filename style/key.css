@@ -9,3 +9,20 @@
 .key-info-btn {position: absolute;z-index: 111;margin-top: -60px;margin-left: 190px;display: block;}
 .fixed-button {position: fixed;bottom: 20px;right: 20px;margin: 10px;z-index: 1111;color: #fff;background: #007bff;border: 0;}  
 .key-info-btn button {cursor: pointer;padding: 0;border: 0;margin-left: 15px;}
+.blackout {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity: 0.5;background-color: #000;z-index: 111;}
+.ank-panel {position: relative;z-index: 1;background: #FFFFFF;max-width: 360px;margin: 0 auto 100px;padding: 45px;text-align: center;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);border-radius: 10px;display: none;z-index: 11111;}
+.ank-panel {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: #fff;padding: 20px;border-radius: 10px;z-index: 999;}
+.ank-inputs {display: flex;flex-direction: column;}
+.ank-inputs label {margin-bottom: 10px;}
+.ank-inputs input {font-family: "Roboto", sans-serif;outline: 0;background: #f2f2f2;border: 0;width: 250px;;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;margin-bottom: 10px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);}
+#pswd-input{width: 210px;}
+#user-input{width: 210px;}
+.ank-select-cat {margin-bottom: 10px;}
+.ank-select-cat select {outline: 0;background: #f2f2f2;border: 0;width: 215px;;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);}
+.ak-btns {display: flex;justify-content: flex-end;margin-top: 10px;}
+.ak-btns button {padding: 5px 10px;border-radius: 5px;border: none;background-color: #007bff;color: #fff;cursor: pointer;margin-left: 10px;}
+.ak-btns button:first-child {background-color: #e9ecef;color: #000;}
+body {transition: opacity 0.5s ease-in-out;background: #24283b;}
+.search-bar {width: 85%;font-family: "Roboto", sans-serif;outline: 0;background: #f2f2f2;border: 0;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;margin-bottom: 10px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);align-items: center;}
+.search-btn{font-family: "Roboto", sans-serif;outline: 0;background: #007bff;border: 0;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;margin-bottom: 10px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);align-items: center;width: 100px;color: #fff;}
+.categories-selector{outline: 0;background: #f2f2f2;border: 0;;margin: 15px 0 0 15px;padding: 15px;font-size: 14px;border-radius: 10px;padding: 5px;border-radius: 5px;border: none;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);}

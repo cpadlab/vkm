@@ -2,7 +2,7 @@ import sqlite3
 import random
 
 # Conectarse a la base de datos
-conn = sqlite3.connect('nombre_de_tu_base_de_datos.db')
+conn = sqlite3.connect(r'..\sqlite3\users\k\vault.sqlite3')
 c = conn.cursor()
 
 # Lista de posibles valores para cada columna
@@ -22,9 +22,11 @@ for i in range(3):
     contrasena = random.choice(contrasenas)
     categoria = random.choice(categorias)
 
+    from functionalities.encrypt import encrypt
+    key = [fila for fila in c.execute("SELECT key FROM info")][0][0]
     # Insertar la nueva fila en la tabla
     c.execute("INSERT INTO vault (code, site, url, username, password, category) VALUES (?, ?, ?, ?, ?, ?)",
-              (codigo, sitio, url, usuario, contrasena, categoria))
+              (codigo, encrypt(sitio, key), encrypt(url, key), encrypt(usuario, key), encrypt(contrasena, key), categoria))
 
 # Guardar los cambios y cerrar la conexión
 conn.commit()

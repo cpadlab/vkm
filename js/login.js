@@ -58,7 +58,7 @@ fetch("../php/check.sesion.php", {
             }
           } else {
             alert(username + " Login Successfully");
-            window.location.replace("../index.html?account=" + username);
+            location.href = "vault.html?user=" + username;
           }
         }, randomTime);    
     } else {

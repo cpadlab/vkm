@@ -10,22 +10,25 @@ function getColorByCategory(category) {
     return colorsByCategory[category] || '#007bff';
 }
 
-fetch("check.sesion.php", {
+fetch("../php/check.sesion.php", {
     method: "POST",
-    body: username
 })
 .then(response => {
     return response.json();
 })
 .then(response => {
 
+    const username = response.username;
+    document.getElementById("vault-tittle").innerHTML = 'VKM | Vault: ' + username;
+
     if (response.login  === true) {
 
-        const username = response.username;
+        const formKeyData = new FormData();
+        formKeyData.append('username', username);
 
         fetch("../php/tr.getkey.php", {
             method: "POST",
-            body: username
+            body: formKeyData
         })
         .then(response => {
             return response.json();
@@ -33,22 +36,24 @@ fetch("check.sesion.php", {
         .then(response => {
 
             const diccionary = JSON.parse(response);
+
             for (const site in diccionary) {
                 
                 const data = diccionary[site];
 
                 const label_code = data[0];
                 const label_site = data[1];
-                const label_username = data[2];
-                const label_password = data[3];
+                const label_username = data[4];
+                const label_password = data[2];
                 const label_category = data[5];
+                const label_url = data[3];                
 
                 const divKey = document.createElement('div');
                 divKey.className = 'key-content';
                 const divBanner = document.createElement('div');
                 divBanner.className = 'key-banner';
                 const imgBanner = document.createElement('img');
-                imgBanner.src = '../imgs/padlock.png';
+                imgBanner.src = '../img/padlock.png';
                 const btnCopy = document.createElement('button');
                 btnCopy.id = 'key-copy-btn';
                 btnCopy.textContent = "Copy";
@@ -83,15 +88,15 @@ fetch("check.sesion.php", {
 
                 const btnDelete = document.createElement('button');
                 btnDelete.id = 'key-delete-btn';
-                const imgDelete = document.createElement('img');
-                imgDelete.id = 'key-delete-btn-img';
-                imgDelete.src = 'http://localhost/vkm/imgs/trash.png';
+
+                const iconTrash = document.createElement('i');
+                iconTrash.className = 'fa-solid fa-trash';
                 btnDelete.addEventListener("click", (event) => {
                     event.preventDefault();
                     
                 })
 
-                btnDelete.appendChild(imgDelete);
+                btnDelete.appendChild(iconTrash);
                 
                 divInfo.appendChild(pSite);
                 divInfo.appendChild(pUser);

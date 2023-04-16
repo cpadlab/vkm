@@ -91,6 +91,17 @@ class Main:
             encrypt(token,key).decode(),
             key
         ))
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS categories (
+                name TEXT
+            )
+        ''')
+        
+        default_categories = ['social network', 'shopping', 'mails', 'webs', 'others']
+        
+        for category in default_categories:
+            cursor.execute("INSERT INTO categories VALUES (?)", (category,))
         
         cursor.execute('''
             CREATE TABLE vault (

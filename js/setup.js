@@ -20,24 +20,6 @@ function nextCard() {
   }
 }
 
-function prevCard() {
-  const nextButton = document.getElementById("btm-nxt");
-  if (currentCard > 1) {
-    currentCard--;
-    const cards = document.querySelectorAll('.card');
-    const currentCardElement = document.querySelector('.card:not([style*="display: none"])');
-    currentCardElement.style.display = 'none';
-    const prevCardElement = currentCardElement.previousElementSibling;
-    prevCardElement.style.display = 'block';
-    if (currentCard < 4) {
-      nextButton.innerHTML = "Siguiente";
-    }
-  } else {
-    location.href = "login.html";
-  }
-}
-
-
 function DownloadCSV() {
   const fileUrl = '../download/vkm_import_template.csv';
   fetch(fileUrl)
