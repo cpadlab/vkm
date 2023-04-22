@@ -9,6 +9,7 @@
     <script src="../js/session-off.js"></script>
     <link rel="stylesheet" href="../style/key.css">
     <link rel="stylesheet" href="../style/vault.css">
+
 </head>
 <body>
   
@@ -41,14 +42,40 @@
           <button type="button" class="search-btn">Search</button>
     </div>
 
-    <button type="button" class="add-btn"><i class="fa-solid fa-plus"></i>  Add to Vault</button>
-    <div class="overlay"></div>
-
+    <button type="button" class="add-btn" id="add-btn"><i class="fa-solid fa-plus"></i>  Add to Vault</button>
+    <div class="overlay" id="overlay"></div>
     
     <!--<i class="fa-solid fa-key"></i>-->
 
+    <div class="dv-nw-psw-site" id="dv-nw-psw-site">
+      <div class="dv-nw-psw-site-banner">
+          <h1>Add New Key</h1>
+      </div>
+      <div class="dv-nw-psw-site-inputs">
+          <link rel="stylesheet" href="../style/addkey.css">
+          <input type="text" name="" id="dv-nw-psw-site-name" placeholder="Site/name" required>
+          <input type="text" name="" id="dv-nw-psw-site-surname" placeholder="Url/link">
+          <input type="text" name="" id="dv-nw-psw-site-username" placeholder="Username" required>
+          <input type="mail" name="" id="dv-nw-psw-site-mail" placeholder="Password">
+          <input type="password" name="" id="dv-nw-psw-site-password" placeholder="Repeat password" required>
+          <select id="dv-nw-psw-site-cat-select">
+            <option value="vault">Default</option>
+            <script src="search-cats.js"></script>
+        </select>
+      </div>
+      <div class="dv-nw-psw-site-btn">
+        <button  id="btnnn-can" onclick="autoF5()">Cancel</button>
+        <script>
+          function autoF5(){
+            location.href = "login.html";
+          }
+        </script>
+          <button id="btnnn-add">Register Key</button>
+      </div>
+  </div>
+
     <script src="../js/keys.js"></script>
     <script src="../js/vault.js"></script>
-    <script src="../js/add_cancel.js"></script>
+    <script src="../js/add.js"></script>
 </body>
 </html>

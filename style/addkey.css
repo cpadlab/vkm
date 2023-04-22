@@ -1,0 +1,47 @@
+body {
+    background-color: #16161a;
+    font-family: "Nunito";
+  }
+  
+  .dv-nw-psw-site {
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    background-color: #16161a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fffffe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dv-nw-psw-site h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .dv-nw-psw-site-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .dv-nw-psw-site-inputs input,
+  .dv-nw-psw-site-inputs select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e0e0e0;
+    font-size: 16px;
+    color: #16161a;
+  }
+  #btnnn-can {
+    background: none;
+    border: 3px solid #5c37b5;
+    margin-right: 20px;
+  }
