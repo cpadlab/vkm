@@ -23,19 +23,16 @@
               <li><a target="_blank" href="#">About</a></li>
               <li><a target="_blank" href="#">Code</a></li>
             </ul>
-            <div class="right"><button>Vault</button></div>
+            <div class="right"><button class="vault-btn" onclick="goVault()">Vault</button></div>
           </div>
           <link rel="stylesheet" href="../style/navbar.css">
           <script src="../js/navbar.js"></script>
     </header>
-
-    
     
     <div class="vault-items">
         <select id="cat-select">
             <option value="vault">Vault</option>
             <option value="create">Create +</option>
-            <option value="opcion3">Opción 3</option>
         </select>
       
           <div class="div-inpt">
@@ -44,7 +41,14 @@
           <button type="button" class="search-btn">Search</button>
     </div>
 
+    <button type="button" class="add-btn"><i class="fa-solid fa-plus"></i>  Add to Vault</button>
+    <div class="overlay"></div>
+
+    
+    <!--<i class="fa-solid fa-key"></i>-->
+
     <script src="../js/keys.js"></script>
     <script src="../js/vault.js"></script>
+    <script src="../js/add_cancel.js"></script>
 </body>
 </html>

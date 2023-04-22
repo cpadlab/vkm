@@ -14,13 +14,13 @@ contrasenas = ['password1', 'password2', 'password3']
 categorias = ['webs', 'shopping', 'webs']
 
 # Generar tres filas aleatorias
-for i in range(3):
-    codigo = random.choice(codigos)
-    sitio = random.choice(sitios)
-    url = random.choice(urls)
-    usuario = random.choice(usuarios)
-    contrasena = random.choice(contrasenas)
-    categoria = random.choice(categorias)
+for i,o in enumerate(range(3)):
+    codigo = codigos[o]
+    sitio = sitios[o]
+    url = urls[o]
+    usuario = usuarios[o]
+    contrasena = contrasenas[o]
+    categoria = categorias[o]
 
     from functionalities.encrypt import encrypt
     key = [fila for fila in c.execute("SELECT key FROM info")][0][0]

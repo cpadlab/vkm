@@ -58,3 +58,39 @@ select:hover {
     background-color: #5c37b5;
     color: #fffffe;
 }
+.add-btn {
+    z-index: 111;
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #16161a;
+    opacity: 0.8;
+    z-index: 999; 
+  }
+  
+  .dv-nw-psw-site {
+    
+    position: relative;
+    z-index: 1000;
+    background: #16161a;
+    display: none;
+    max-width: 800px;
+    text-align: center;
+  }
+  .dv-nw-psw-site-cat-select {
+    position: relative  ;
+    display: block;
+  }
+  #btnnn-can {
+    background: none;
+    border: 3px solid #5c37b5;
+    margin-right: 20px;
+  }

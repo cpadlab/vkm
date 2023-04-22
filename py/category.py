@@ -19,7 +19,7 @@ class Main:
         dic = []
 
         for row in rows:
-            dic.append(row)
+            dic.append(row[0])
 
         conn.close()
 

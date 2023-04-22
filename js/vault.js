@@ -1,7 +1,5 @@
 
 var select = document.getElementById("cat-select");
-	
-
 
 fetch("../php/check.sesion.php", {
     method: "POST",
@@ -10,25 +8,28 @@ fetch("../php/check.sesion.php", {
     return response.json();
 })
 .then(response => {
-
+	
     const username = response.username;
+
+	const formCatData = new FormData();
+	formCatData.append('username', username);
 
 	fetch("../php/tr.category.php", {
 		method: "POST",
-		body: username
+		body: formCatData
 	})
 	.then(response => {
 	return response.json();
 	})
 	.then(result => {
-		console.log(result)
+		
+		const diccionary = JSON.parse(result);
+
+		for (var i = 0; i < diccionary.length; i++) {
+			var option = document.createElement("option");
+			option.text = diccionary[i];
+			select.appendChild(option);
+		}
+		
 	})
-
-	var opciones = ["Opción 1", "Opción 2", "Opción 3"];
-
-	for (var i = 0; i < opciones.length; i++) {
-		var option = document.createElement("option");
-		option.text = opciones[i];
-		select.appendChild(option);
-	}
 })

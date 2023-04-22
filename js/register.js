@@ -46,7 +46,7 @@ fetch("../php/check.sesion.php", {
           fetch("../php/tr.register.php", {
               method: "POST",
               body: formRegisterData
-          })
+})
           .then(response => {
             return response.json();
           })
