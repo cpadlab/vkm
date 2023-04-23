@@ -37,6 +37,8 @@ fetch("../php/check.sesion.php", {
 
             const diccionary = JSON.parse(response);
 
+            console.log(diccionary)
+
             for (const site in diccionary) {
                 
                 const data = diccionary[site];
