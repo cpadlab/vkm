@@ -54,28 +54,28 @@
       <div class="dv-nw-psw-site-inputs">
           <link rel="stylesheet" href="../style/addkey.css">
           <input type="text" name="" id="dv-nw-psw-site-name" placeholder="Site/name" required>
-          <input type="text" name="" id="dv-nw-psw-site-surname" placeholder="Url/link">
+          <input type="text" name="" id="dv-nw-psw-site-url" placeholder="Url/link">
           <input type="text" name="" id="dv-nw-psw-site-username" placeholder="Username" required>
-          <input type="mail" name="" id="dv-nw-psw-site-mail" placeholder="Password">
-          <input type="password" name="" id="dv-nw-psw-site-password" placeholder="Repeat password" required>
+          <input type="password" name="" id="dv-nw-psw-site-password" placeholder="Password">
+          <input type="password" name="" id="dv-nw-psw-site-rpassword" placeholder="Repeat password" required>
           <select id="dv-nw-psw-site-cat-select">
-            <option value="vault">Default</option>
-            <script src="search-cats.js"></script>
+            <option value="default">Default</option>
         </select>
       </div>
       <div class="dv-nw-psw-site-btn">
         <button  id="btnnn-can" onclick="autoF5()">Cancel</button>
         <script>
           function autoF5(){
-            location.href = "login.html";
+            location.href = "vault.html";
           }
         </script>
-          <button id="btnnn-add">Register Key</button>
+          <button id="btnnn-add" >Register Key</button>
       </div>
   </div>
 
     <script src="../js/keys.js"></script>
     <script src="../js/vault.js"></script>
-    <script src="../js/add.js"></script>
+    <script src="../js/seeAdd.js"></script>
+    <script src="../js/addKey.js"></script>
 </body>
 </html>

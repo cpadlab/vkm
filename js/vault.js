@@ -1,5 +1,6 @@
 
 var select = document.getElementById("cat-select");
+var select2 = document.getElementById("dv-nw-psw-site-cat-select")
 
 fetch("../php/check.sesion.php", {
     method: "POST",
@@ -29,6 +30,10 @@ fetch("../php/check.sesion.php", {
 			var option = document.createElement("option");
 			option.text = diccionary[i];
 			select.appendChild(option);
+		
+			var option2 = document.createElement("option");
+			option2.text = diccionary[i];
+			select2.appendChild(option2);
 		}
 		
 	})

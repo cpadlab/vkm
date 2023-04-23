@@ -98,7 +98,7 @@ class Main:
             )
         ''')
         
-        default_categories = ['s.network', 'shopping', 'mails', 'webs', 'others']
+        default_categories = ['s.network', 'shopping', 'mails', 'webs', 'others', 'default']
         
         for category in default_categories:
             cursor.execute("INSERT INTO categories VALUES (?)", (category,))

@@ -6,12 +6,10 @@ body {
   .dv-nw-psw-site {
     position: absolute;
     z-index: 9999;
-    display: none;
-    background-color: #16161a;
     padding: 20px;
     border-radius: 10px;
     color: #fffffe;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
   }
@@ -44,4 +42,7 @@ body {
     background: none;
     border: 3px solid #5c37b5;
     margin-right: 20px;
+  }
+  .dv-nw-psw-site-btn { 
+    margin-top: 10px;
   }

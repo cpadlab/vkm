@@ -4,6 +4,6 @@ const inputss = document.getElementById('dv-nw-psw-site');
  
 addBtn.addEventListener('click', function() {
   event.preventDefault();
-  inputss.style.display = 'block';
+  inputss.style.display = 'flex';
   overlay.style.display = 'block';
 });
