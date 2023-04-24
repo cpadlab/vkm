@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VKM | Index</title>
+    <title>VKM | Home</title>
+    <script src="https://kit.fontawesome.com/e13647fd7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="navbar-left">
-                <a href="#">VKM</a>
+        <div class="navbar">
+            <div class="logo">
+              <h2>VKM</h2>
             </div>
-            <div class="navbar-rigth">
-                <a href="html/login.html">Login</a>
-                <a href="html/register.html">Register</a>
-            </div>
-        </nav>
-    </header>
+            <ul class="links">
+              <li class="links1"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+              <li class="links2"><a target="_blank" href="https://github.com/14wual/vkm"><i class="fa-solid fa-code"></i> Development</a></li>
+              <li class="links2"><a target="_blank" href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+              <li class="links1"><a href="html/key-generator.html"><i class="fa-solid fa-wand-magic-sparkles"></i></a></li>
+              <li class="links1"><a href="html/login.html"><i class="fa-solid fa-user"></i></a></li>
+              <div class="right"><button class="vault-btn" onclick="goVault()">Vault</button></div>
+            </ul>
+          </div>
+          <link rel="stylesheet" href="style/navbar.css">
+          <script>            
+            function goVault() {
+            location.href = "html/vault.html";
+            }
+          </script>
+      </header>
+
     <div class="main-content">
         <h1>VKM</h1>
+        <p>VKM is your self-hosted local indie password manager</p>
         <div class="main-btn">
-            <a href="html/login.html">Login</a>
-            <a href="html/register.html">Register</a>
+            <a href="html/login.html"><i class="fa-solid fa-user"></i> Login</a>
+            <a href="html/register.html"><i class="fa-solid fa-user-plus"></i> Register</a>
         </div>
     </div>
     <footer>
-        <a href="https://github.com/14wuak/vkm">Code</a>
-        <a href="https://www.buymeacoffee.com/wual">Support</a>
+        <div class="foot-btn">
+            <a href="https://github.com/14wual/vkm" target="_blank"><i class="fa-solid fa-code"></i> Develop</a>
+            <a href="https://www.buymeacoffee.com/wual" target="_blank" id="foot-btn-2"><i class="fa-solid fa-mug-saucer"></i> Support</a>
+        </div>
     </footer>
 </body>
 </html>

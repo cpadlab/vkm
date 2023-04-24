@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VKM | Register</title>
+    <script src="https://kit.fontawesome.com/e13647fd7c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/register.css">
     <script src="../js/sesion-on.js"></script>
 </head>
@@ -16,16 +17,21 @@
               <h2>VKM</h2>
             </div>
             <ul class="links">
-              <li><a target="_blank" href="../index.html">Home</a></li>
-              <li><a target="_blank" href="#">Support</a></li>
-              <li><a target="_blank" href="#">About</a></li>
-              <li><a target="_blank" href="#">Code</a></li>
+              <li class="links1"><a href="../index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+              <li class="links2"><a target="_blank" href="https://github.com/14wual/vkm"><i class="fa-solid fa-code"></i> Development</a></li>
+              <li class="links2"><a target="_blank" href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+              <li class="links1"><a href="key-generator.html"><i class="fa-solid fa-wand-magic-sparkles"></i></a></li>
+              <li class="links1"><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+              <div class="right"><button class="vault-btn" onclick="goVault()">Vault</button></div>
             </ul>
-            <div class="right"><button>Vault</button></div>
           </div>
           <link rel="stylesheet" href="../style/navbar.css">
-          <script src="../js/navbar.js"></script>
-    </header>
+          <script>            
+            function goVault() {
+            location.href = "vault.html";
+            }
+          </script>
+      </header>
 
     <div class="register-content">
         <div class="register-banner">
