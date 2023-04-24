@@ -18,7 +18,7 @@ class Main:
 
         key = [fila for fila in c.execute("SELECT key FROM info")][0][0]
         
-        query = f"SELECT * FROM keys WHERE site LIKE '%{search}%' OR user LIKE '%{search}%' OR url LIKE '%{search}%'"
+        query = f"SELECT * FROM vault WHERE site LIKE '%{search}%' OR username LIKE '%{search}%' OR url LIKE '%{search}%'"
         c.execute(query)
         results = c.fetchall()
 

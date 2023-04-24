@@ -1,4 +1,4 @@
-const sear_selectss = document.getElementById("cat-select");
+const sear_selectss = document.getElementById("search-btn");
 const minput =  document.getElementById("input");
 
 sear_selectss.addEventListener("click", function() {

@@ -13,22 +13,25 @@
 </head>
 <body>
   
-    <header>
-        <div class="navbar">
-            <div class="logo">
-              <h2>VKM</h2>
-            </div>
-            <ul class="links">
-              <li><a target="_blank" href="../index.html">Home</a></li>
-              <li><a target="_blank" href="#">Support</a></li>
-              <li><a target="_blank" href="#">About</a></li>
-              <li><a target="_blank" href="#">Code</a></li>
-            </ul>
-            <div class="right"><button class="vault-btn" onclick="goVault()">Vault</button></div>
-          </div>
-          <link rel="stylesheet" href="../style/navbar.css">
-          <script src="../js/navbar.js"></script>
-    </header>
+  <header>
+    <div class="navbar">
+        <div class="logo">
+          <h2>VKM</h2>
+        </div>
+        <ul class="links">
+          <li class="links1"><a target="_blank" href="../index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="links2"><a target="_blank" href="#"><i class="fa-solid fa-code"></i> Development</a></li>
+          <li class="links2"><a target="_blank" href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+          <li class="links1"><a href="key-generator.html"><i class="fa-solid fa-wand-magic-sparkles"></i></a></li>
+          <li class="links1"><a href=""><i class="fa-solid fa-user"></i></a></li>
+          <li class="links1"><a href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>
+          <div class="right"><button class="vault-btn" onclick="goVault()">Vault</button></div>
+          
+        </ul>
+      </div>
+      <link rel="stylesheet" href="../style/navbar.css">
+      <script src="../js/navbar.js"></script>
+  </header>
     
     <div class="vault-items">
         <select id="cat-select">
@@ -39,7 +42,7 @@
           <div class="div-inpt">
             <input type="text" id="input" name="input" placeholder="Enter your search...">
           </div>
-          <button type="button" class="search-btn">Search</button>
+          <button type="button" class="search-btn" id="search-btn">Search</button>
     </div>
 
     <button type="button" class="add-btn" id="add-btn"><i class="fa-solid fa-plus"></i>  Add to Vault</button>

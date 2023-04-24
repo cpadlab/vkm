@@ -107,88 +107,14 @@ section {
   font-weight: bold;
   letter-spacing: 0.5px;
 }
-@media screen and (max-width: 850px) {
-  .navbar .right {
-    height: 0;
-    overflow: hidden;
-  }
-  
-  .toggle {
-    position: absolute;
-    top: 32.5px;
-    right: 20px;
-    z-index: 99;
-    transform: translateY(-50%);
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .toggle > * {
-    width: 80%;
-    height: 2px;
-    background: #fff;
-    margin: 3px 0;
-  }
-  .navbar.collapsed .toggle .line1 {
-    transform: rotate(-45deg) translate(-4px, 5px);
-  }
-  .navbar.collapsed .toggle .line2 {
-    opacity: 0;
-  }
-  .navbar.collapsed .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-  .navbar.collapsed .logo {
-    position: absolute;
-    z-index: 44;
-  }
-  .navbar .links {
-    position: fixed;
-    background: #080808;
-    font-family: "Nunito";
-    z-index: 40;
-    top: 0;
-    left: -100%;
-    flex-direction: column;
-    width: 45vw;
-    height: 100vh;
-  }
-  .navbar .links li:first-child {
-    margin-top: 80px;
-  }
-  .navbar.collapsed .links {
-    left: 0;
-  }
-  .navbar.collapsed .links a {
-    color: #fff;
-  }
-  .navbar.collapsed .links li {
-    width: 100%;
-  }
-  .navbar.collapsed .links li:hover a {
-    color: #080808;
-  }
-  .navbar.collapsed .right {
-    position: fixed;
-    font-family: "Nunito";
-    width: 45vw;
-    text-align: center;
-    height: auto;
-    bottom: 40px;
-    left: 22.5vw;
-    transform: translateX(-50%);
-    z-index: 45;
-  }
-  .navbar.collapsed ~ main {
-    filter: blur(1px);
-    opacity: 0.8;
-  }
-  .navbar.sticky {
-    position: fixed;
-    z-index: 40;
-  }
+#popup-content {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }

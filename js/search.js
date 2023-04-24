@@ -17,7 +17,7 @@ function getColorByCategory(category) {
 }
 
 const search = getSearchFromURL()
-document.getElementById("search-tittle").innerHTML = 'VKM | Search: ' + category;
+document.getElementById("search-tittle").innerHTML = 'VKM | Search: ' + search;
 
 fetch("../php/check.sesion.php", {
     method: "POST",
