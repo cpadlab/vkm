@@ -6,7 +6,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## Releases
 
-## [Unreleased]
+### [Unreleased]
 
 Visual/Aesthetic:
 - Framework in charge of displaying keys.
