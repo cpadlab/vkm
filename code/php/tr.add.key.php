@@ -7,7 +7,7 @@ $innwpswsite_password = $_POST["innwpswsite_password"];
 $innwpswsite_rpassword = $_POST["innwpswsite_rpassword"];
 $innwpswsite_cat = $_POST["innwpswsite_cat"];
 
-$command = "python ../py/registerKey.py $username $innwpswsite_name $innwpswsite_url $innwpswsite_username $innwpswsite_password $innwpswsite_rpassword $innwpswsite_cat";
+$command = "python ../py/ac.register.key.py $username $innwpswsite_name $innwpswsite_url $innwpswsite_username $innwpswsite_password $innwpswsite_rpassword $innwpswsite_cat";
 $output = exec($command);
 
 if (trim($output) == "True") {

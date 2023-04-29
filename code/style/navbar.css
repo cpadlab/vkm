@@ -111,3 +111,11 @@ section {
   font-weight: bold;
   letter-spacing: 0.5px;
 }
+@media only screen and (max-width: 750px) {
+  .links2 a{
+    display: none;
+  }
+  .links1 a span {
+    display: none;
+  }
+}

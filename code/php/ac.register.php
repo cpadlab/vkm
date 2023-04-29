@@ -6,7 +6,7 @@ $register_mail = $_POST["mail"];
 $register_password = $_POST["password"];
 $register_rep_password = $_POST["rep_password"];
 
-$command = "python ../py/register.py $register_name $register_surname $register_username $register_mail $register_password";
+$command = "python ../py/ac.register.user.py $register_name $register_surname $register_username $register_mail $register_password";
 $output = exec($command);
 
 if (trim($output) == "True") {

@@ -1,7 +1,7 @@
 <?php
 $username = $_POST["username"];
 
-$command = "python ../py/category.py $username";
+$command = "python ../py/get.categories.py $username";
 $output = exec($command);
 
 echo json_encode($output);

@@ -2,7 +2,7 @@
 $login_username = $_POST["username"];
 $login_password = $_POST["password"];
 
-$command = "python ../py/login.py $login_username $login_password";
+$command = "python ../py/ac.login.py $login_username $login_password";
 $output = exec($command);
 
 $success = false;
