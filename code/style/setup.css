@@ -9,8 +9,15 @@ body {
     align-items: center;
     height: 100vh;
   }
+
+  .butoms-divvs {
+    display: block;
+    justify-content: center;
+  }
   
   .card {
+    width: 400px;
+    display: none;
     background-color: #16161a;
     color: #94a1b2;
     padding: 20px;
@@ -19,12 +26,17 @@ body {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
+
+  .card:nth-child(1) {
+    display: block;
+  }
   
   h2 {
     color: #fffffe;
   }
   
   button {
+    display: block;
     background-color: #7f5af0;
     color: #fffffe;
     border: none;
