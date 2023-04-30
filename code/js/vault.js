@@ -35,10 +35,14 @@ function show_keys(diccionary) {
         const btnCopy = document.createElement('button');
         btnCopy.id = 'key-copy-btn';
         btnCopy.textContent = "Copy";
+        const popupContent = document.getElementById('popup-content');
         btnCopy.addEventListener("click", (event) => {
             event.preventDefault();
+            popupContent.style.display = 'block';
+            setTimeout(() => {popupContent.style.display = 'none';}, 500);
             navigator.clipboard.writeText(label_password)
         })
+
         const divInfo = document.createElement('div');
         divInfo.className = 'key-info';
         const pSite = document.createElement('p');
@@ -71,7 +75,6 @@ function show_keys(diccionary) {
         iconTrash.className = 'fa-solid fa-trash';
         btnDelete.addEventListener("click", (event) => {
             event.preventDefault();
-            
         })
 
         btnDelete.appendChild(iconTrash);
@@ -86,6 +89,7 @@ function show_keys(diccionary) {
         
         divBanner.appendChild(imgBanner);
         divBanner.appendChild(btnCopy);
+        /*divBanner.appendChild(btnGo);*/
         
         divKey.appendChild(divBanner);
         divKey.appendChild(divInfo);

@@ -1,4 +1,4 @@
-import sys, os, configparser, hashlib, base64 
+import sys, os, configparser, hashlib, base64 , datetime
 
 class getArgvs:
     
@@ -141,6 +141,7 @@ class Main:
         user_parser.set(argsv.register_username, 'last', 'never')
         user_parser.set(argsv.register_username, 'status', 'active')
         user_parser.set(argsv.register_username, 'left', '5')
+        user_parser.set(argsv.register_username, 'on', str(datetime.datetime.now()))
         
         user_parser.write(open(user_ini, 'w'))
         
