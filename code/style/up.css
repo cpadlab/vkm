@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+body {
+    background-color: #16161a;
+    font-family: "Nunito";
+}
+#labek-text { 
+    display: block;
+    color: #94a1b2;   
+    font-size: 2em;
+}
+
+form {
+    position: relative;
+    text-align: center;
+    margin-top: 2em;
+}
+label {
+    position: relative;
+    margin-top: 2em;
+    text-align: center;
+}
+input {
+    position: relative;
+    margin-top: 1em;
+    color: #fffffe;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    background-color: #7f5af0;
+}
+
+#cancel-btn {
+    margin-top: -1em;
+    position: relative;
+    color: #fffffe;
+    border: 2px solid #7f5af0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: none;
+}
+#cancel-btn2 {
+    bottom: 2em;
+    right: 2em;
+}
