@@ -34,33 +34,48 @@ ac_login_btn.addEventListener("click", function(event) {
                 .then(response => {return response.json();})
                 .then(result => {
                     if (!result.success) {
-                    switch (result.errors[0]) {
-                        case "Username does not exist":
-                            location.href = "login.html?error=Username%20does%20not%20exist.";
-                            break;
-                        case "The account status is incorrect":
-                            location.href = "login.html?error=The%20account%20status%20is%20incorrect.";
-                            break;
-                        case "The account status is blocked":
-                            location.href = "recovery.html?account=" + username;
-                            break;
-                        case "Password is incorrect":
-                            location.href = "login.html?error=Password%20is%20incorrect.";
-                            break;
-                        case "Unknown response from server":
-                            location.href = "login.html?error=Unknown%20response%20from%20server";
-                            break;
-                        default:
-                            console.error("Unknown error:", result.errors);
-                            break;}
+                        const formErrorData = new FormData();
+                        formErrorData.append('error', result.errors);
+                        fetch("php/ac.register.error.php", {
+                            method: "POST",
+                            body: formErrorData})
+                        switch (result.errors[0]) {
+                            case "Username does not exist":
+                                location.href = "login.html?error=Username%20does%20not%20exist.";
+                                break;
+                            case "The account status is incorrect":
+                                location.href = "login.html?error=The%20account%20status%20is%20incorrect.";
+                                break;
+                            case "The account status is blocked":
+                                location.href = "recovery.html?account=" + username;
+                                break;
+                            case "Password is incorrect":
+                                location.href = "login.html?error=Password%20is%20incorrect.";
+                                break;
+                            case "Unknown response from server":
+                                location.href = "login.html?error=Unknown%20response%20from%20server";
+                                break;
+                            default:
+                                console.error("Unknown error:", result.errors);
+                                break;}
                     } else {
                         alert(username + " Login Successfully");
                         location.href = "vault.html?user=" + username;
                 }}, 500);    
             } else {
+                const formErrorData = new FormData();
+                formErrorData.append('error', "The entries cannot be empty.");
+                fetch("php/ac.register.error.php", {
+                    method: "POST",
+                    body: formErrorData})
                 alert("The entries cannot be empty.");
                 location.href = "login.html?user=" + username;}
         } else {
+            const formErrorData = new FormData();
+            formErrorData.append('error', "Log out to access this page.");
+            fetch("php/ac.register.error.php", {
+                method: "POST",
+                body: formErrorData})
             alert("Log out to access this page.");
             location.href = "vault.html?user=" + username;}
     })

@@ -66,18 +66,38 @@ add_key_tovault_btn.addEventListener('click', function(event) {
                             alert(innwpswsite_site_value + " Added Correct.");
                             location.href = "vault.html";
                         } else {
+                            const formErrorData = new FormData();
+                            formErrorData.append('error', response);
+                            fetch("php/ac.register.error.php", {
+                                method: "POST",
+                                body: formErrorData})
                             alert("Error: ");
                             location.href = "vault.html";}
                     })
                 } else {
+                    const formErrorData = new FormData();
+                    formErrorData.append('error', "Password must be the same.");
+                    fetch("php/ac.register.error.php", {
+                        method: "POST",
+                        body: formErrorData})
                     alert("Error: Password must be the same.");
                     location.href = "vault.html";}
             } else {
+                const formErrorData = new FormData();
+                formErrorData.append('error', "Arguments must not be empty.");
+                fetch("php/ac.register.error.php", {
+                    method: "POST",
+                    body: formErrorData})
                 alert("Error: Arguments must not be empty.");
                 location.href = "vault.html";}
         } else {
-          alert("Sesion Expired.");
-          location.href = "login.html";}
+            const formErrorData = new FormData();
+            formErrorData.append('error', "Sesion Expired.");
+            fetch("php/ac.register.error.php", {
+                method: "POST",
+                body: formErrorData})
+            alert("Sesion Expired.");
+            location.href = "login.html";}
       })
 });
 

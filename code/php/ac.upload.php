@@ -5,15 +5,15 @@
   $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   
   if($fileType != "csv") {
-    header("Location: ../upload.html");
+    header("Location: ../upload.html?error=No%20csv%20file.");
     exit;
-  }
+  } 
 
   if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
     header("Location: ../confirmation.html");
     exit;
   } else {
-    header("Location: upload.html");
+    header("Location: upload.html?error=Upload%20error.");
     exit;
   }
 ?>

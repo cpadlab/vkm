@@ -9,6 +9,47 @@ function getColorByCategory(category) {
     return colorsByCategory[category] || '#007bff';
 }
 
+function getMainDomain(url) {
+    let a = document.createElement('a');
+    a.href = url;
+    let domain = a.hostname;
+    let parts = domain.split('.').reverse();
+    let mainDomain = parts[1];
+    if (mainDomain === 'co') {
+        mainDomain = parts[2];}
+    return mainDomain;
+}
+
+function getImgPath(url) {
+    let domain = getMainDomain(url)
+    const imgs_paths = {
+        'github': 'img/github.svg',
+        'google': 'img/google.svg',
+        'amazon': 'img/amazon.svg',
+        'facebook': 'img/facebook.svg',
+        'twitter': 'img/twitter.svg',
+        'microsoft': 'img/microsoft.svg',
+        'instagram': 'img/instagram.svg',
+        'twitch': 'img/twitch.svg',
+        'hackthebox': 'img/box-open-solid.svg',
+        'twitter': 'img/twitter.svg',
+        'netflix': 'img/tv-solid.svg',
+        'spotify': 'img/spotify.svg',
+        'steam': 'img/steam.svg',
+        'cisco': 'img/signal-solid.svg',
+        'epicgames': 'img/gamepad-solid.svg',
+        'netacad': 'img/signal-solid.svg',
+        'pypi': 'img/python.svg',
+        'stackoverflow': 'img/stack-overflow.svg',
+        'codepen': 'img/codepen.svg',
+        'hackerrank': 'img/hackerrank.svg',
+        'hackerone': 'img/redhat.svg',
+        'paypal': 'img/paypal.png',
+        'discord': 'img/discord.svg'};
+    let imagePath = imgs_paths[domain];
+    return imagePath || 'img/padlock.png';
+}
+
 function getSearchFromURL(variable) {
     var urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(variable);
@@ -31,7 +72,7 @@ function show_keys(diccionary) {
         const divBanner = document.createElement('div');
         divBanner.className = 'key-banner';
         const imgBanner = document.createElement('img');
-        imgBanner.src = 'img/padlock.png';
+        imgBanner.src = getImgPath(label_url);
         const btnCopy = document.createElement('button');
         btnCopy.id = 'key-copy-btn';
         btnCopy.textContent = "Copy";
@@ -178,6 +219,12 @@ document.addEventListener("DOMContentLoaded", function() {
             break;
         default:
             var title_error__reload_page = confirm("Error: Unknown page. Reload the page or restart the browser.");
+
+            const formErrorData = new FormData();
+            formErrorData.append('error', page_title);
+            fetch("php/ac.register.error.php", {
+                method: "POST",
+                body: formErrorData})
             if (title_error__reload_page == true) {location.reload()} else {}            
     }
 });

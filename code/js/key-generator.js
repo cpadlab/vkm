@@ -45,7 +45,12 @@ function generatePassword(event) {
         console.log(response);
         const passwordOutput = document.getElementById("password-output");
         passwordOutput.innerText = response.password;})
-    .catch(error => {console.error(error);});
+    .catch(error => {
+        const formErrorData = new FormData();
+        formErrorData.append('error', error);
+        fetch("php/ac.register.error.php", {
+            method: "POST",
+            body: formErrorData})});
 }
 
 generateBtn.addEventListener("click", generatePassword);

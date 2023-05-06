@@ -47,6 +47,10 @@ ac_register_btn.addEventListener("click", function(event) {
                     .then(response => {return response.json();})
                     .then(result => {
                         if (result.success === 'false') {
+                            formErrorData.append('error', result);
+                            fetch("php/ac.register.error.php", {
+                                method: "POST",
+                                body: formErrorData})
                             alert("An error has occurred.");
                             location.href = "register.html";        
                         } else {
@@ -55,9 +59,18 @@ ac_register_btn.addEventListener("click", function(event) {
                     })
                 }, 500);
             } else {
+                formErrorData.append('error', "Passwords must be the same.");
+                fetch("php/ac.register.error.php", {
+                    method: "POST",
+                    body: formErrorData})
                 alert("Passwords must be the same.");
+                
                 location.href = "register.html";}
         } else {
+            formErrorData.append('error', "Log out to access this page.");
+            fetch("php/ac.register.error.php", {
+                method: "POST",
+                body: formErrorData})
             alert("Log out to access this page.");
             location.href = "vault.html?user=" + username;}
       })
