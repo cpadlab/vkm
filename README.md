@@ -1,6 +1,6 @@
 # VKM V5.0
 
-<p align="center"><img src="vkm/images/logo.png" alt="vkm-logo" style='width:100px;height:100px;'></p>
+<p align="center"><img src="code/images/logo.png" alt="vkm-logo" style='width:100px;height:100px;'></p>
 
 <div align="center">
   <img src="https://img.shields.io/badge/Code%20By%2014Wual-8338ec">
