@@ -1,0 +1,39 @@
+/*
+# ██╗    ██╗██╗   ██╗ █████╗ ██╗     
+# ██║    ██║██║   ██║██╔══██╗██║     
+# ██║ █╗ ██║██║   ██║███████║██║     
+# ██║███╗██║██║   ██║██╔══██║██║     
+# ╚███╔███╔╝╚██████╔╝██║  ██║███████╗
+#  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
+#          (code by wual)
+
+# VKM V5.0.6 | 2023 Summer Review 1
+# Page >> https://14wual.github.io/vkm
+# Code >> https://github.com/14wual/VKM
+# Follow me >> https://twitter.com/14wual
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+body {background: #1c1c1c;color: #f4f4f4;}
+html, body {margin: 0;padding: 0;font-family: 'Titillium Web';color: #f4f4f4;}
+button {cursor: pointer;}
+input:focus {outline: none;}  
+img {width: 100px;height: 100px;margin-bottom: 1em;}
+#register-form {text-align: center;position: absolute;display: inline-block;top: calc(50% - 213.64px);left: calc(50% - 133.19px);}
+.div-in-username, .div-in-password-1, .div-in-password-2 {background: #1e2122;margin-top: 0.5em;display: inline-block;color: #f4f4f4;width: 266.39px;}
+.div-in-username {border-radius: 10px 10px 0px 0px;}
+.div-in-password-2 {border-radius: 0px 0px 10px 10px;}
+.register-form-action button {border-radius: 10px;background: #1e2122;margin-top: 0.5em;display: inline-block;color: #f4f4f4;width: 266.39px;border: none;padding: 1em;transition: background 0.3s ease-in-out;}
+.register-form-action button:hover {background: #8338ec;}
+.register-form-action:disabled {pointer-events: none;background: #1e2122;}
+.register-form-action button:disabled:hover {cursor: not-allowed;background: #1e2122;}
+.div-in-username div, .div-in-password-1 div, .div-in-password-2 div {display: inline;margin: 0;padding: 0;background: #1e2122;}
+.div-in-username button, .div-in-password-1 button, .div-in-password-2 button {margin: 0;background: none;border: none;background: #1e2122;}
+.div-in-username-btn, .div-in-password-1-btn, .div-in-password-2-btn {margin: auto;width: 57.53px;}
+.div-in-username button i, .div-in-password-1 button i, .div-in-password-2 button i {color: #f4f4f4;transition: color 0.3s ease-in-out;}
+input {border-radius: 10px;}
+.password-error {transition: all 0.2s ease-in-out;}
+.div-in-username button i:hover, .div-in-password-1 button i:hover, .div-in-password-2 button i:hover {color: #8338ec;}
+.register-form-action a {color: #8338ec;text-decoration: none;transition: all ease-in-out 0.3s;}
+.register-form-action a:hover {color: #8338ec;text-decoration: underline;}
+.div-in-username input, .div-in-password-1 input, .div-in-password-2 input {margin: 0;background: #1e2122;border: none;color: #f4f4f4;padding: 1em;}

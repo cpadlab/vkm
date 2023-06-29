@@ -1,0 +1,88 @@
+<!--
+# ██╗    ██╗██╗   ██╗ █████╗ ██╗     
+# ██║    ██║██║   ██║██╔══██╗██║     
+# ██║ █╗ ██║██║   ██║███████║██║     
+# ██║███╗██║██║   ██║██╔══██║██║     
+# ╚███╔███╔╝╚██████╔╝██║  ██║███████╗
+#  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
+#          (code by wual)
+
+# VKM V5.0.6 | 2023 Summer Review 1
+# Page >> https://14wual.github.io/vkm
+# Code >> https://github.com/14wual/VKM
+# Follow me >> https://twitter.com/14wual
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="search-title">Search - VKM</title>
+    <link rel="stylesheet" href="../vault/vault.css">
+    <script src="https://kit.fontawesome.com/e13647fd7c.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="stylesheet" href="search-p.css">
+</head>
+<body>
+
+    <script src="/modules/session/check_status.js"></script>
+
+    <header>
+        <nav>
+
+            <div class="hn-left">
+                <img src="../images/logo.png">
+                <p id="search-title2">VKM</p>
+                <button class="menu-btn-down" id="menu-btn-down"><i class="fa-solid fa-angle-down"></i></button>
+                <button class="menu-btn-up" id="menu-btn-up"><i class="fa-solid fa-angle-up"></i></button>
+            </div>
+
+            <div class="hn-right">
+                <a href="../generate/"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+                <button class="log-out-btn" id="log-out-btn"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button class="go-vault-btn" id="go-vault-btn"><span>Vault</span> 
+                    <i class="fa-solid fa-lock"></i>
+                    <i class="fa-solid fa-lock-open"></i>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <br> 
+
+    <div class="block-items" id="block-items">
+
+        <hr>
+
+        <div class="bi-left">
+            <button id="register-g"> Create Group</button>
+            <button id="register-k">Add Key</button>
+            <button id="key-count">Total keys</button>
+            <button id="session-expires-span">Time Elapsed</button>
+        </div>
+        
+    </div>
+
+    <br id="bi-br-dbc">
+
+    <div class="db-content" id="db-content"></div>
+
+    <div class="edit-k-error" id="edit-gk-error">
+        <p id="edit-key-error">Ooh! that search does have keys</p>
+        <a href='../create/?create=True&type=key'>Create Key</a>
+    </div>
+
+    <div class="search-main" id="search-main">
+        <link rel="stylesheet" href="../modules/search.css">
+        <input type="text" placeholder="Search..." id="search-input">
+        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <script src="../modules/search.js"></script>
+    </div>
+
+    <script src="../modules/common/vault.js"></script>
+    <script src="../modules/pages/search/search.js"></script>
+
+</body>
+</html>

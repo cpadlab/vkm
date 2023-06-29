@@ -1,0 +1,23 @@
+/*
+# ██╗    ██╗██╗   ██╗ █████╗ ██╗     
+# ██║    ██║██║   ██║██╔══██╗██║     
+# ██║ █╗ ██║██║   ██║███████║██║     
+# ██║███╗██║██║   ██║██╔══██║██║     
+# ╚███╔███╔╝╚██████╔╝██║  ██║███████╗
+#  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
+#          (code by wual)
+
+# VKM V5.0.6 | 2023 Summer Review 1
+# Page >> https://14wual.github.io/vkm
+# Code >> https://github.com/14wual/VKM
+# Follow me >> https://twitter.com/14wual
+*/
+
+input:focus {outline: none;}  
+.search-main {z-index: 1;position: absolute;display: inline-block;width: 50%;justify-content: center;left: 50%; transform: translate(-50%, 500%);opacity: 0;bottom: 1em;border-radius: 10px;background: #1e2122;transition: all ease-in-out 0.3s;}
+.search-main input {width: calc(100% - 2em - 45px);padding: 1em;border-radius: 10px;background: #1e2122;border: none;color: #f4f4f4;}
+.search-main button {background: none;padding: 1em;border: none;color: #f4f4f4;transition: all ease-in-out 0.3s;border-radius: 0px 10px 10px 0px ;}
+.search-main button:hover {background: #8338ec;}
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background: #1c1c1c; }
+::-webkit-scrollbar-thumb {background: #1e2122;border-radius: 10px;}

@@ -1,0 +1,87 @@
+/*
+# ██╗    ██╗██╗   ██╗ █████╗ ██╗     
+# ██║    ██║██║   ██║██╔══██╗██║     
+# ██║ █╗ ██║██║   ██║███████║██║     
+# ██║███╗██║██║   ██║██╔══██║██║     
+# ╚███╔███╔╝╚██████╔╝██║  ██║███████╗
+#  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
+#          (code by wual)
+
+# VKM V5.0.6 | 2023 Summer Review 1
+# Page >> https://14wual.github.io/vkm
+# Code >> https://github.com/14wual/VKM
+# Follow me >> https://twitter.com/14wual
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+body {background: #1c1c1c;color: #f4f4f4;}
+html, body {margin: 0;padding: 0;font-family: 'Titillium Web';color: #f4f4f4;}
+button {cursor: pointer;}
+input:focus {outline: none;}  
+img {width: 60px;height: 60px;}
+header {position: relative;display: inline-block;width: 98%;justify-content: center;height: 80px;left: calc(50% - 49%); top: 1em;border-radius: 10px;}
+#header-title {font-size: 30px;font-weight: 700;margin: auto;margin-left: 0.3em;}
+#header-title::after{content: 'username';font-weight: 100;}
+header nav div {position: relative;display: inline;}
+.hn-left {left: 1em;top: 1em;}
+header button  {color: #f4f4f4;background: none;padding: 1em;border: none;border-radius: 10px;}
+header a {color: #f4f4f4;text-decoration: none;}
+header i {transition: color ease-in-out 0.3s;}
+header i:hover {color: #8338ec;}
+.go-vault-btn {font-weight: 700;}
+.go-vault-btn i {transition: display ease-in-out 0.3s;}
+.go-vault-btn i:hover{color: #f4f4f4;}
+.go-vault-btn i.fa-lock-open {display: none;}  
+.go-vault-btn:hover i.fa-lock {display: none;}  
+.go-vault-btn:hover i.fa-lock-open {display: inline-block;}
+.go-vault-btn {border:2px solid #8338ec;transition: all ease-in-out 0.3s;}
+.go-vault-btn:hover {background: #8338ec;}
+.hn-left p{display: inline;}
+.hn-left {position: absolute;display: inline;top: 1em;left: 1em;display: flex;align-items: center;justify-content: center;}
+.hn-right {position: absolute;display: inline;top:1em;right: 1em;}  
+.bi-left button {position: relative;color: #f4f4f4;background: #1e2122;padding: 1em;border-radius: 10px;margin-left: 0.3em;border: 2px solid #1e2122;transition: border ease-in-out 0.3s;height: 45.66px;margin-bottom: 1em;}
+.bi-left button:hover {border: 2px solid #8338ec;}
+#register-g {position: relative;left: 1em;}
+#register-g i{color: #f4f4f4;}
+#register-k {position: relative;left: 1em;}
+#key-count {position: relative;left: 1em;}
+#key-count:hover {cursor:unset;border: 2px solid #1e2122;}
+#session-expires-span{position: relative;left: 1em;}
+#session-expires-span:hover {cursor:unset;border: 2px solid #1e2122;}
+.block-items {display: none;}
+.block-items div {display: inline;}
+.div-input-s {display: block;}
+hr {padding: 3px;color: #1c1c1c;background: #1c1c1c;border: none;}
+.div-input-s {position: absolute;display: block;margin-bottom: 1em;width: 98%;background: #1e2122;left: calc(50% - 49%); border-radius: 10px;}
+.div-input-s i {background: #1e2122;padding: 1em;margin: 0;border-radius: 10px;}
+.div-input-s input {color: #f4f4f4;width:unset;background: #1e2122;border: none;margin-left: 0;height: 48px;border-radius: 10px;}
+.dvs-dad {position: relative;margin-top: 1em;}  
+.dvs-dad input {width: 90%;}
+.db-content {width: 98%;}
+.cdbr-title {position: relative;font-weight: 700;}
+.cdbr-edit {float: right;color: #f4f4f4;background: none;border: none;border-radius: 10px;transition: color ease-in-out 0.3s;position: relative;margin-left: 1em;}
+.cdbr-edit:hover {color: #8338ec;}
+.content-db-row {cursor: pointer;position: relative;background: #1e2122;width: auto;padding: 1em;margin-top: 0.3em;position: relative;left: 1em;}
+.content-db-row:first-child {border-radius: 10px 10px 0px 0px;}  
+.content-db-row:last-child {border-radius: 0px 0px 10px 10px;}
+.menu-btn-down i {transition: transform ease 0.3s ;}  
+.menu-btn-down:hover i.fa-angle-down {transform: rotate(180deg);}
+.menu-btn-up {display: none;}
+.menu-btn-up i {transition: transform ease 0.3s ;}  
+.menu-btn-up:hover i.fa-angle-up {transform: rotate(180deg);}
+#pre-gt {position: relative;padding: 1em;background: #8338ec;}
+.mes-alert {position: absolute;bottom: 1em;left: 1em;transform: translate(-500%);opacity: 0;background: #1e2122;padding: 1em;border-radius: 10px;transition: all ease-in-out 0.3s;}
+.mes-alert:hover {color:rgba(244, 244, 244, 0.4);}
+.mes-alert p {display: inline;}
+.mes-alert i.fa-x {color: #f4f4f4;position: absolute;left: 50%;transform: translate(-50%, -300%);transition: all ease-in 0.18s;opacity: 0;cursor: pointer;}
+.mes-alert i.fa-x:hover {color: #8338ec;}
+.mes-alert:hover > i.fa-x {opacity: 1;transform: translate(-50%, 0%);}
+.mes-alert button {all: none;background: none;}
+#mes-alert2 p, #mes-alert2 i{color: #bb2020;transition: all ease-in-out 0.18s;}
+#mes-alert2:hover > #mes-alert2 p, #mes-alert2 i {color: rgba(187	32	32, 0.4);}
+#mes-alert2 i.fa-x {color: #f4f4f4;transition: all ease-in-out 0.18s;}
+#mes-alert2 i.fa-x:hover {color: #8338ec;}
+#IconFolder {margin-right: 0.3em;transition: all ease-in-out 0.3s;}
+#IconFolder:hover {color: #8338ec;}
+#iconKey {margin-right: 0.3em;transition: all ease-in-out 0.3s;}
+#iconKey:hover {color: #8338ec;}

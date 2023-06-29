@@ -1,0 +1,69 @@
+/*
+# ██╗    ██╗██╗   ██╗ █████╗ ██╗     
+# ██║    ██║██║   ██║██╔══██╗██║     
+# ██║ █╗ ██║██║   ██║███████║██║     
+# ██║███╗██║██║   ██║██╔══██║██║     
+# ╚███╔███╔╝╚██████╔╝██║  ██║███████╗
+#  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝
+#          (code by wual)
+
+# VKM V5.0.6 | 2023 Summer Review 1
+# Page >> https://14wual.github.io/vkm
+# Code >> https://github.com/14wual/VKM
+# Follow me >> https://twitter.com/14wual
+*/
+
+.edit-group-form-items {border-radius: 10px;text-align: center;position: absolute;display: none;top: calc(50% - 176.98px);left: calc(50% - 133.19px);border-radius: 10px;}
+input:focus {outline: none;}
+input {margin: 0;background: #1e2122;border: none;color: #f4f4f4;padding: 1em;border-radius: 10px;}
+#input-group {width: calc(283.22px - 2.5em);margin-left: 0.5em;}
+.edit-group-form-items button {border-radius: 10px;background: #1e2122;margin-left: 0.5em;display: inline-block;color: #f4f4f4;width: 133.19px;border: none;padding: 1em;transition: background 0.3s ease-in-out;}
+.edit-group-form-items button:hover {background: #8338ec;}
+.edit-group-form-items button:disabled {cursor: not-allowed;}
+.edit-group-form-items button:disabled:hover {background: #1e2122;}
+#edit-group-btn {margin-top: 1em;width: calc(273.53px);border: 2px solid #8338ec;}
+#cancel-group-btn, #delete-group-btn {border: 2px solid #1e2122;}
+.edit-g-btn {display: inline;}
+#edit-title2{font-size: 30px;font-weight: 700;margin: auto;margin-left: 0.3em;}
+#edit-title2::after{content: 'item';font-weight: 100;}
+.ck-form-items p {font-size: 30px;margin: 0.3em;}
+#edit-group-title {font-size: 30px;margin: 0.3em;}
+.edit-g-error {display: none;}
+#edit-group-error {font-size: 30px;margin: 0.3em;}
+.edit-g-error {text-align: center;position: absolute;left: 50%;transform: translate(-50%);top: calc(50% - 70px);}
+.edit-g-error a {border-radius: 10px;background: #1e2122;margin-left: 0.5em;display: inline-block;color: #f4f4f4;text-decoration: none;border: none;padding: 1em;transition: background 0.3s ease-in-out;}
+.edit-g-error a:hover {background: #8338ec;}
+.edit-k-error {display: none;}
+#edit-key-error {font-size: 30px;margin: 0.3em;}
+.edit-k-error {text-align: center;position: absolute;left: 50%;transform: translate(-50%);top: calc(50% - 70px);}
+.edit-k-error a {border-radius: 10px;background: #1e2122;margin-left: 0.5em;display: inline-block;color: #f4f4f4;text-decoration: none;border: none;padding: 1em;transition: background 0.3s ease-in-out;}
+.edit-k-error a:hover {background: #8338ec;}
+.delete-group {display: none;}
+.delete-group input {position: relative;width: calc(283.22px - 2.5em);margin-bottom: 0.5em;}
+.ck-form-items {border-radius: 10px;text-align: center;position: absolute;display: none;top: calc(50% - 210.98px);left: calc(50% - 150.19px);width: 300px;}
+.ck-form-items button{position: relative;border: none;background: #1e2122;color:#f4f4f4;transition: color ease-in-out 0.3s;border-radius: 0px;}
+.ck-form-items button:hover {background: #8338ec;}
+#input-ckuser , #input-ckurl, #input-cktitle {width: calc(300px - 2em);}
+#input-ckpassword {width: calc(300px - 2em - 35px);}
+#see-password-btn {all: unset;background: #1e2122;color: #f4f4f4;transition: all ease-in-out 0.3s;cursor: pointer;}
+#see-password-btn:hover {color: #8338ec;}
+#no-see-password-btn {all: unset;background: #1e2122;color: #f4f4f4;transition: all ease-in-out 0.3s;cursor: pointer;}
+#no-see-password-btn:hover {color: #8338ec;}
+.btn-see-pswd:hover > .btn-see-pswd i{background: none;color: #8338ec;}
+.ckurl, .ckuser {border-radius: 0;}
+.ckurl button, .ckuser button{border-radius: 0;}
+.cktitle, .ckurl, .ckuser, .ckpassword, .btn-ck {margin-top: 0.5em;border-radius: 0;background: #1e2122;}
+.ckpassword {background: #1e2122;border-radius: 0px 0px 10px 10px;}
+.cktitle {border-radius: 10px 10px 0px 0px ;}
+#ckselec-s {position: relative;width: calc(300px - 40.61px - 1em);padding: 1em;border: none;background: #1e2122;color: #f4f4f4;border-radius: 10px;margin-top: 0.5em;}
+#ckselec-s.option {border-radius: 10px;}
+#ckselec-s.option:hover {background: none;border: 2px solid #8338ec;}
+#delete-key-btn {all:  unset;padding: 1em;cursor: pointer;background: #1e2122;border-radius: 0px 10px 10px 0px;transition: all ease-in-out 0.3s;}
+#delete-key-btn:hover {background: #8338ec;}
+.btn-ck {border-radius: 10px}
+#edit-key-btn {padding: 1em;width: calc(300px - 1em - 40px);height: 56px;border-radius: 10px 0px 0px 10px;transition: all ease-in-out 0.3s;}
+#edit-key-btn:disabled:hover {cursor: not-allowed;background: #1e2122;}
+.delete-finito {display: none;margin-top: 0.5em;}
+#delete-finito-i {margin-top: 0.5em;width: calc(300px - 2em);}
+.delete-finito button {padding: 1em;margin-top: 0.5em;border-radius: 10px;transition: all ease-in-out 0.3s;}
+#ydelete-key-btn:disabled:hover {cursor: not-allowed;background: #1e2122;}
