@@ -32,7 +32,7 @@ VKM V5.0.6 | 2023 Summer Review 1
 
 1. [Install](https://github.com/14wual/vkm/#Install)
 2. [Usage](https://github.com/14wual/vkm/#Usage) - Start Commands
-3. [Usage](https://github.com/14wual/vkm/#VKM%20App) - Api Usage
+3. [Usage](https://github.com/14wual/vkm/#vkm-app) - Api Usage
 8. [Wiki](https://github.com/14wual/vkm/wiki)
 8. [Pages](https://github.com/14wual/vkm/#Pages)
 6. [Video & ScreenShots](https://github.com/14wual/vkm/#Gallery)
@@ -46,11 +46,15 @@ What would you like to see in the future? [Open an Issue](https://github.com/14w
 **Important**
 
 ```
-Vkm has been tested on Firefox and chronium-based browsers like Brave-browser and Google Chrome. It is tested on Windows operating systems (10 and 11) and Linux Debian (Debian, Kali) and Ubuntu. Using the default, xfce and bspwm window managers.
+Vkm has been tested on Firefox and chronium-based browsers like Brave-browser
+and Google Chrome. It is tested on Windows operating systems (10 and 11) and
+Linux Debian (Debian, Kali) and Ubuntu. Using the default, xfce and bspwm window
+managers.
 ```
 
 ```
-It is important that if you decide to use VKM, keep in mind that making a copy of the .kdbx file is not a bad idea and can prevent fatal damage.
+It is important that if you decide to use VKM, keep in mind that making a copy
+of the .kdbx file is not a bad idea and can prevent fatal damage.
 ```
 
 ## Install
@@ -107,23 +111,23 @@ Vkm *default* `http server port` is `1014`, `fastapi server` *default* `port` is
 
 **Register** - Page: `http://localhost:1014/register`
 
-![Page](screenshots\register-learn.png)
+![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/register-learn.png)
 
 **NavBar**
 
-![NavBar](screenshots\navbar_menu-learn.png)
+![NavBar](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/navbar_menu-learn.png)
 
 **Vault** - Page: `http://localhost:1014/vault`
 
-![Page](screenshots\vault-learn.png)
+![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/vault-learn.png)
 
 **Edit Key/Group** - Page: `http://localhost:1014/edit?args...`
 
-![Page](screenshots\edit_key-learn.png)
+![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/edit_key-learn.png)
 
 **Generate Password** - Page: `http://localhost:1014/generate`
 
-![Page](screenshots\edit_key-learn.png)
+![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/generate_password-learn.png)
 
 ## Pages
 
