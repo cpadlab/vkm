@@ -79,93 +79,93 @@ Welcome to the vkm registration page! Enter your username and password for your 
 
 Please read the warnings carefully in order to create a secure password and create your account.
 
-![Register Errors](screenshots\register-error.png)
+![Register Errors](https://github.com/cpadlab/vkm/blob/master/screenshots/register-error.png)
 
 If you still have some doubts, you can check the little help box by clicking on the button `?`
 
-![Register Help](screenshots\register-help.png)
+![Register Help](https://github.com/cpadlab/vkm/blob/master/screenshots/register-help.png)
 
 If your password is secure, it is time to create your account. This text will tell you if it is suitable.
 
-![Register Correct](screenshots\register-correct.png)
+![Register Correct](https://github.com/cpadlab/vkm/blob/master/screenshots/register-correct.png)
 
 Once you have created your account, an on-screen message will tell you it's time to log in!
 
-![Register Succesful](screenshots\register-succesful.png)
+![Register Succesful](https://github.com/cpadlab/vkm/blob/master/screenshots/register-succesful.png)
 
 ## Login
 
 This is the login page:
 
-![Login Page](screenshots\login-page.png)
+![Login Page](https://github.com/cpadlab/vkm/blob/master/screenshots/login-page.png)
 
 Don't forget that when logging in there are also password limitations and help at the bottom of the page,
 
 ## Vault
 
-![Vault](screenshots\vault.png)
+![Vault](https://github.com/cpadlab/vkm/blob/master/screenshots/vault.png)
 
 ## Groups
 
 When we enter the vault, it looks very empty, so we have to create our first group!
 
-![Vault 0 Grups](screenshots\vault-non-groups.png)
+![Vault 0 Grups](https://github.com/cpadlab/vkm/blob/master/screenshots/vault-non-groups.png)
 
 In this screen the groups are created:
 
-![Create Grups](screenshots\create-group.png)
+![Create Grups](https://github.com/cpadlab/vkm/blob/master/screenshots/create-group.png)
 
 Edit the name and colour of the group as you see fit.
 
-![Modify Group](screenshots\group-edit.png)
+![Modify Group](https://github.com/cpadlab/vkm/blob/master/screenshots/group-edit.png)
 
 Filter by groups for faster results!
 
-![Filter Group](screenshots\filter-group.png)
+![Filter Group](https://github.com/cpadlab/vkm/blob/master/screenshots/filter-group.png)
 
 ## Keys
 
 In this screen the keys are created:
 
-![Create Keys](screenshots\create-key.png)
+![Create Keys](https://github.com/cpadlab/vkm/blob/master/screenshots/create-key.png)
 
 These are the options that vkm allows you with your password. Click on the copy button and copy the password! If you click on the username it will be copied and the same with the title! Modify, delete or review your password from the dropdown with the 3 dots.
 
-![Key Option](screenshots\key-options.png)
+![Key Option](https://github.com/cpadlab/vkm/blob/master/screenshots/key-options.png)
 
 ### Vault (Other)
 
 Do you know that it is also possible to search within vkm? Search by username, site title or url!
 
-![Search](screenshots\search.png)
+![Search](https://github.com/cpadlab/vkm/blob/master/screenshots/search.png)
 
 You've gone to the toilet for 5 minutes and don't want anyone to see your passwords? When you switch tabs you'll get this floating box!
 
-![Auto Logout](screenshots\auto-logout.png)
+![Auto Logout](https://github.com/cpadlab/vkm/blob/master/screenshots/auto-logout.png)
 
 When you log out manually or after 15 minutes of session time, you will see a floating box telling you that your session has ended.
 
-![Logout](screenshots\logout.png)
+![Logout](https://github.com/cpadlab/vkm/blob/master/screenshots/logout.png)
 
 Generate a secure and personalised password whenever you need it, but don't forget that when registering a new password you can also generate it with a single button!
 
-![Generate Password](screenshots\create-password.png)
+![Generate Password](https://github.com/cpadlab/vkm/blob/master/screenshots/create-password.png)
 
 ## Account
 
 Change your password or username as you wish!
 
-![Change Account](screenshots\account-change.png)
+![Change Account](https://github.com/cpadlab/vkm/blob/master/screenshots/account-change.png)
 
 No longer use your account? Delete it!
 
-![Delete Account](screenshots\account-delete.png)
+![Delete Account](https://github.com/cpadlab/vkm/blob/master/screenshots/account-delete.png)
 
 Don't forget that you can export your passwords!
 
 # Gallery
 
-![Vault](screenshots\vault.png)
+![Vault](https://github.com/cpadlab/vkm/blob/master/screenshots/vault.png)
 
 # Contribute
 
