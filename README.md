@@ -45,15 +45,15 @@ What would you like to see in the future? [Open an Issue](https://github.com/cpa
 
 # Table of Contents
 
-1. [What is VKM?]()
-2. [The new version!]()
-3. [Install]()
-4. [How to use it]()
-5. [Gallery]()
-6. [Contribute]()
-8. [AutoCompile]()
-9. [License]()
-11. [Technologies]()
+1. [What is VKM?](https://github.com/cpadlab/vkm?tab=readme-ov-file#welcome-to-vkm)
+2. [The new version!](https://github.com/cpadlab/vkm?tab=readme-ov-file#vkmv6-has-been-released)
+3. [Install](https://github.com/cpadlab/vkm?tab=readme-ov-file#install)
+4. [How to use it](https://github.com/cpadlab/vkm?tab=readme-ov-file#how-to-use-it)
+5. [Gallery](https://github.com/cpadlab/vkm?tab=readme-ov-file#how-to-use-it)
+6. [Contribute](https://github.com/cpadlab/vkm?tab=readme-ov-file#contribute)
+8. [AutoCompile](https://github.com/cpadlab/vkm?tab=readme-ov-file#autocompile)
+9. [License](https://github.com/cpadlab/vkm?tab=readme-ov-file#license)
+11. [Technologies](https://github.com/cpadlab/vkm?tab=readme-ov-file#technologies)
 
 # Install 
 
@@ -174,8 +174,6 @@ Welcome to VKM! We are delighted that you wish to contribute to our project. To 
 We value and appreciate all contributions, large and small. If you have any questions or need help contributing, please don't hesitate to contact us. Thank you for being part of the VKM community.
 
 [How to contribute?](https://github.com/cpadlab/vkm/blob/master/CONTRIBUTING.md)
-
-# Possible "Errors"
 
 # AutoCompile
 
