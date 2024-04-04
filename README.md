@@ -1,179 +1,197 @@
-# VKM V5.0
+# Welcome to VKM
 
-<p align="center"><img src="code/images/logo.png" alt="vkm-logo" style='width:100px;height:100px;'></p>
+**VKM** (*VaultKeyManager*) is a **personal project** that I started in November 2021 when I was just starting to learn how to program. It was my first project and over time it has become my personal challenge to make it more professional and secure. 
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Code%20By%2014Wual-8338ec">
-  <img src="https://img.shields.io/github/downloads/14wual/vkm/total">
-  <img src="https://img.shields.io/github/license/14wual/vkm">
-  <img src="https://img.shields.io/github/repo-size/14wual/vkm">
-  <img src="https://img.shields.io/tokei/lines/github/14wual/vkm">
-  <img src="https://img.shields.io/github/stars/14wual/vkm">
-  <img src="https://img.shields.io/github/v/release/14wual/vkm">
-</div>
+**But... What is VKM?** VKM is a **self-hosted password manager** with an **intuitive web interface** programmed in `Python` and `JS` using `FastApi` and `Jquery` technologies.
 
-<br>
+# VKMv6 has been released!
 
-VKM V5.0.6 | 2023 Summer Review 1
+The sixth version of vkm is packed with changes and improvements. For version 6.0, vkm has been **reprogrammed** from scratch, to bring a **new web redesign**, **more features**, **security** and a cleaner code and better structure for all those who want to contribute to this *small project*.
 
-**Description**: `A self-hosted indie password manager coded by wual`
+**But... What does this new version bring?**
 
-**Page**: [https://14wual.github.com/vkm](https://14wual.github.io/vkm)
+1. **Security**
+   - HTTPS
+     - The `web server` and `FastApi` server now work with **https**. Say goodbye to http. A **self-signed certificate** is included in the project, but from the `vkm.conf`, *you can add your own*!
+   - HTTP Bearer
+     - **All connections** from the server to FastApi (python) are made with a **check token**, using the `HTTP Bearer library`, and python requests are **checked with a session token** *before returning any information*.
 
-**Code**: [https://github.com/14wual/vkms](https://github.com/14wual/vkm)
+2. **New Functionalities**
+   - About your Registration or Login
+     - Red **indicators** have been added at the bottom of your screen that **tell you what rules your password lacks** in order to be secure and usable in VKM (you can see them in the "How to use it" section). Also, on the registration page there is a button with a short simplified explanation of what your password needs.
+   - Keys in the vault
+     - You now have a feature that **allows you to delete your password**.
+     - You **can now bookmark the passwords** you use the most!
+     - A "View key" section has been added to be able to **view the key without modifying** it. No more hassle!
+     - **All the options** that you could have when creating the key **have been added inside the key modification** (Now you can change group, add to favorites, ...). That is to say, the "Edit Key" section has been completed.
+    - The groups
+      - You can now **customize the group banners** by color, for easy visualization.
+      - A new feature has been added that allows you to **change the name** and color of your group.
+      - A button has been added to facilitate the **deletion of groups**.
+      - **Clicking on the group separator** (where an arrow with the group name appears) **will collapse or display the passwords** so that the vault is not "full".
+      - From the drop-down next to the search input, **you can filter by favorites or groups** to only see the one you need instead of the whole vault.
+    - Account
+      - Modify your account, one of the most awaited functionalities!
+      - A section has been added to **modify the account username**.
+      - You can now **change the login password**.
+      - No longer need this account? You can now **delete the account** if you have no use for it and it only occupies disk memory, but be careful, this *operation cannot be undone*.
+      - Now you **can export all your account passwords** as a `.csv` file. The format/header of your file is: `['code', 'name', 'url', 'password', 'username', 'favorite', 'color', 'group']`
+3. **The new graphical interface**
+   - VKM brings a new, **more intuitive** and **complete** graphical interface. Using the vkm colors, it now brings **more customization**, **better organization** and a **cleaner** and more complete vault aesthetics. You can get to know it by looking at the "How to use it" section.
 
-**Download**: [Install](https://github.com/14wual/vkm/#Install)
+*A changelog has been re-created. It has been reset for this new era of VKM.*
 
-**Wiki**: [https://github.com/14wual/vkm/wiki](https://github.com/14wual/vkm/wiki)
+What would you like to see in the future? [Open an Issue](https://github.com/cpadlab/vkm/issues)
 
-**Issues**: [https://github.com/14wual/vkm/issues](https://github.com/14wual/vkm/issues)
+# Table of Contents
 
-## Table of Contents 
+1. [What is VKM?]()
+2. [The new version!]()
+3. [Install]()
+4. [How to use it]()
+5. [Gallery]()
+6. [Contribute]()
+8. [AutoCompile]()
+9. [License]()
+11. [Technologies]()
 
-1. [Install](https://github.com/14wual/vkm/#Install)
-2. [Usage](https://github.com/14wual/vkm/#Usage) - Start Commands
-3. [Usage](https://github.com/14wual/vkm/#vkm-app) - Api Usage
-8. [Wiki](https://github.com/14wual/vkm/wiki)
-8. [Pages](https://github.com/14wual/vkm/#Pages)
-6. [Video & ScreenShots](https://github.com/14wual/vkm/#Gallery)
-7. [AutoCompile](https://github.com/14wual/vkm/#AutoCompile)
-5. [License](https://github.com/14wual/vkm/LICENSE)
+# Install 
 
-[**Learn about VKM**](https://github.com/14wual/vkm/wiki)
-
-What would you like to see in the future? [Open an Issue](https://github.com/14wual/vkm/issues)
-
-**Important**
-
+```shell
+git clone https://github.com/cpadlab/vkm
+cd vkm && pip install -r requirements.txt
+python3 vkm.py --setup
 ```
-Vkm has been tested on Firefox and chronium-based browsers like Brave-browser
-and Google Chrome. It is tested on Windows operating systems (10 and 11) and
-Linux Debian (Debian, Kali) and Ubuntu. Using the default, xfce and bspwm window
-managers.
+
+# How to use it
+
+**Switch on VKM**
+
+```shell
+python vkm.py  # You can also use --start
 ```
 
-```
-It is important that if you decide to use VKM, keep in mind that making a copy
-of the .kdbx file is not a bad idea and can prevent fatal damage.
-```
+## Register
 
-## Install
+Welcome to the vkm registration page! Enter your username and password for your new account and ...
 
-### Option 1
+![Register Page](screenshots\register-page.png)
 
-*Version VKM V5.0 | NO Compiled*
+Please read the warnings carefully in order to create a secure password and create your account.
 
-**Linux**
+![Register Errors](screenshots\register-error.png)
+
+If you still have some doubts, you can check the little help box by clicking on the button `?`
+
+![Register Help](screenshots\register-help.png)
+
+If your password is secure, it is time to create your account. This text will tell you if it is suitable.
+
+![Register Correct](screenshots\register-correct.png)
+
+Once you have created your account, an on-screen message will tell you it's time to log in!
+
+![Register Succesful](screenshots\register-succesful.png)
+
+## Login
+
+This is the login page:
+
+![Login Page](screenshots\login-page.png)
+
+Don't forget that when logging in there are also password limitations and help at the bottom of the page,
+
+## Vault
+
+![Vault](screenshots\vault.png)
+
+## Groups
+
+When we enter the vault, it looks very empty, so we have to create our first group!
+
+![Vault 0 Grups](screenshots\vault-non-groups.png)
+
+In this screen the groups are created:
+
+![Create Grups](screenshots\create-group.png)
+
+Edit the name and colour of the group as you see fit.
+
+![Modify Group](screenshots\group-edit.png)
+
+Filter by groups for faster results!
+
+![Filter Group](screenshots\filter-group.png)
+
+## Keys
+
+In this screen the keys are created:
+
+![Create Keys](screenshots\create-key.png)
+
+These are the options that vkm allows you with your password. Click on the copy button and copy the password! If you click on the username it will be copied and the same with the title! Modify, delete or review your password from the dropdown with the 3 dots.
+
+![Key Option](screenshots\key-options.png)
+
+### Vault (Other)
+
+Do you know that it is also possible to search within vkm? Search by username, site title or url!
+
+![Search](screenshots\search.png)
+
+You've gone to the toilet for 5 minutes and don't want anyone to see your passwords? When you switch tabs you'll get this floating box!
+
+![Auto Logout](screenshots\auto-logout.png)
+
+When you log out manually or after 15 minutes of session time, you will see a floating box telling you that your session has ended.
+
+![Logout](screenshots\logout.png)
+
+Generate a secure and personalised password whenever you need it, but don't forget that when registering a new password you can also generate it with a single button!
+
+![Generate Password](screenshots\create-password.png)
+
+## Account
+
+Change your password or username as you wish!
+
+![Change Account](screenshots\account-change.png)
+
+No longer use your account? Delete it!
+
+![Delete Account](screenshots\account-delete.png)
+
+Don't forget that you can export your passwords!
+
+# Gallery
+
+![Vault](screenshots\vault.png)
+
+# Contribute
+
+Welcome to VKM! We are delighted that you wish to contribute to our project. To ensure that all contributors have a positive experience, we have created these contribution guidelines. Please be sure to read them carefully before contributing.
+
+We value and appreciate all contributions, large and small. If you have any questions or need help contributing, please don't hesitate to contact us. Thank you for being part of the VKM community.
+
+[How to contribute?](https://github.com/cpadlab/vkm/blob/master/CONTRIBUTING.md)
+
+# Possible "Errors"
+
+# AutoCompile
 
 ```bash
-pip install -U -r <(curl -sSL https://14wual.github.io/vkm/requirements.txt)
-wget https://14wual.github.io/vkm/download/vkm5.tar.gz
+pyinstaller --onefile --add-data="./*:." --icon="vkm/include/assets/logo.ico" --name="vkm" vkm.py
 ```
 
-**Windows** - PowerShell
+# License
 
-```powershell
-iex (irm -Uri 'https://14wual.github.io/vkm/requirements.txt' -UseBasicParsing).Content | pip install -U -r -
-Invoke-WebRequest -Uri 'https://14wual.github.io/vkm/download/vkm5.zip' -OutFile 'vkm5.zip'
-```
+**GNU GENERAL PUBLIC LICENSE** Version 3, 29 June 2007
 
-### Option 2 
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 
-*Complete VKM V5.0 Repository (source code and compiled)*
+[Read More](https://github.com/cpadlab/vkm/blob/master/LICENSE)
 
-```bash
-git clone https://github.com/14wual/vkm/
-cd vkm/ && pip install -r requirements.txt
-```
+# Technologies
 
-## Usage
-
-
-```
-python3 vkm.py # You should be in the vkm folder
-```
-
-### Start Commands
-
-```txt
-usage: vkm.py [-h] [-u USERNAME] [-p PORT] [-R]
-
-options:
-  -h, --help                        Show this help message and exitç
-  -R, --register                    Go Register
-  -p PORT, --port PORT              Select VKM boot port
-  -u USERNAME, --username USERNAME  Go Login
-```
-
-### VKM App
-
-Vkm *default* `http server port` is `1014`, `fastapi server` *default* `port` is `1015`.
-
-**Register** - Page: `http://localhost:1014/register`
-
-![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/register-learn.png)
-
-**NavBar**
-
-![NavBar](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/navbar_menu-learn.png)
-
-**Vault** - Page: `http://localhost:1014/vault`
-
-![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/vault-learn.png)
-
-**Edit Key/Group** - Page: `http://localhost:1014/edit?args...`
-
-![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/edit_key-learn.png)
-
-**Generate Password** - Page: `http://localhost:1014/generate`
-
-![Page](https://raw.githubusercontent.com/14wual/vkm/master/screenshots/generate_password-learn.png)
-
-## Pages
-
-```
-VKM
-├───create
-├───edit
-├───generate
-├───login
-├───register
-├───search
-├───show
-└───vault
-```
-
-## Auto Compile
-
-```
-pyinstaller --noconfirm --onedir --windowed --icon "<path>/vkm/images/logo.ico" --name "vkm" --debug "all" --add-data "<path>/vkm/index.html:." --add-data "<path>/vkm/create:create/" --add-data "<path>/vkm/ddbb:ddbb/" --add-data "<path>/vkm/ddbb/kdbx:kdbx/" --add-data "<path>/vkm/edit:edit/" --add-data "<path>/vkm/generate:generate/" --add-data "<path>/vkm/images:images/" --add-data "<path>/vkm/login:login/" --add-data "<path>/vkm/register:register/" --add-data "<path>/vkm/search:search/" --add-data "<path>/vkm/show:show/" --add-data "<path>/vkm/vault:vault/" --add-data "<path>/vkm/modules:modules/"  "<path>/vkm/vkm.py"
-```
-
-## Gallery
-
-### ScreenShots
-
-**Main Vault** - Screenshot
-
-![Vault](screenshots/vkm-vault.png)
-
-**Registering Password** - Screenshot
-
-![Register Key](screenshots/vkm-register-key.png)
-
-**Generating Password** - Screenshot
-
-![Generate Key](screenshots/vkm-generate-key.png)
-
-### WualPK Video
-
-**Not available**
-
-## Technologies
-
-1. Python
-2. FastApi
-3. JavaScript
-4. KDBX - KeePass
-5. HTML
-6. CSS
+| Python    | JavaScript | HTML | CSS | SQLite3 | JQuery | FastApi | Bearer |
+| -------- | ------- | -------- | ------- | -------- | ------- | -------- | ------- |

@@ -1,0 +1,12 @@
+/*
+      _         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+*/
+
+.group-divider,.host,.host-groupskeys{max-width:100%;width:100%;display:flex}#group-delete:hover,#group-settings:hover,.key .key-banner{background:var(--primary)}#group-delete,#group-settings,.key .key-banner span i{color:var(--text);transition:var(--transition-simple)}#group-delete,#group-settings,.group-divider,.group-divider p,.group-divider span,.key .key-banner span i,.key .key-info .ki-right button{transition:var(--transition-simple)}.host,.host-groupskeys{flex-direction:column}.group-divider{cursor:pointer;align-items:center;margin:auto;opacity:.5}#kir-options,.dc-btn-close{margin-top:.5em}.group-divider:hover{opacity:1}.group-divider:hover span{opacity:.8}.group-divider p{margin-right:1em}.group-divider i{margin-right:.5em}.group-divider span{flex:1;width:auto;height:1px;background:var(--text)}#group-delete,#group-settings{background:0 0;border:0;cursor:pointer;padding-left:1em;padding-right:.5em;margin-left:.5em;border-radius:5px}#group-delete{margin-left:.5em}.key{display:inline-block;flex-direction:column;background:var(--text);color:var(--background);border-radius:5px;max-width:15em;width:15em;margin-left:1em}.key .key-banner{border-radius:5px 5px 0 0;cursor:pointer;position:relative;height:5em;overflow:hidden}.key .key-banner span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.key .key-banner span i{font-size:3em}.key .key-banner:hover span i{transform:scale(1.1)}.key .key-info{position:relative;padding:.5em;display:flex;justify-content:space-between;align-content:center}.key .key-info .ki-left{display:flex;flex-direction:column;margin-right:1em}.key .key-info .ki-right{display:flex;flex-direction:column}.key .key-info .ki-right button{background:0;border:0;cursor:pointer}.key .key-info .ki-right button:hover{color:var(--primary)}#kil-sitename{font-weight:700}#kil-sitename,#kil-username{cursor:pointer}.hidden{display:none}.dropdown-content{display:none;position:absolute;background-color:var(--text);min-width:100px;padding:1em;border-radius:5px;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1}.dropdown-content .dc-btn{display:block;margin-top:.4em}.dc-btn-close{color:#bb2020}.key{margin-top: 1em;margin-bottom: .5em;}

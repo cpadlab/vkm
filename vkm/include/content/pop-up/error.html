@@ -1,0 +1,33 @@
+<!--   
+      _                         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+-->
+
+<div class="black-layer"></div>
+
+<div id="error-div">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    <p id="error-p"></p>
+    <button onclick="window.location.reload()">Close</button>
+</div>
+
+<script>
+    $(function() {
+        
+        $(".black-layer").animate({
+            opacity: 0.5
+        }, 1000);
+
+        $("#error-div").animate({
+            top: '50%',
+            opacity: 1
+        }, 1000);
+
+    });
+</script>

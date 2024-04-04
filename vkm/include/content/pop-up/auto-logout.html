@@ -1,0 +1,65 @@
+<!--   
+      _                         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+-->
+
+<div class="black-layer"></div>
+
+<div id="logout-div">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <p id="logout-p"> <b>The session is automatically closed in</b><br>It has been detected that you have left vkm.<br>Do you want to log out or continue? </p>
+    <button id="ed-close">Close</button>
+    <button id="ed-logout">Logout</button>
+</div>
+
+<script type="module">
+    import { deleteCookie } from './vkm/include/scripts/cookies.js';
+
+    $(function() {
+        
+        $(".black-layer").animate({
+            opacity: 0.5
+        }, 1000);
+
+        $("#logout-div").animate({
+            top: '50%',
+            opacity: 1
+        }, 1000);
+
+    });
+    
+    var timeTotal = 1 * 60;
+    var paragraph = document.getElementById("logout-p");
+
+    function logoutAction() {
+        deleteCookie('session');deleteCookie('time');window.location.reload();
+    }
+
+    function deleteAutoLogout() {
+        timeTotal = timeTotal * 15*60 ;$('.alerts').empty()
+    }
+
+    document.getElementById('ed-close').addEventListener('click', deleteAutoLogout);
+    document.getElementById('ed-logout').addEventListener('click', logoutAction);
+
+    function updateTextTime() {
+        var mins = Math.floor(timeTotal / 60);
+        var secs = timeTotal % 60;
+
+        var timeFormatted = mins.toString().padStart(2, '0') + ":" + secs.toString().padStart(2, '0');
+        paragraph.innerHTML = "<b>The session is automatically closed in " + timeFormatted + "</b><br>It has been detected that you have left vkm.<br>Do you want to log out or continue?"
+        
+        timeTotal--;
+        if (timeTotal < 0) {logoutAction();}
+    }
+
+    updateTextTime();
+
+var intervalID = setInterval(updateTextTime, 1000);
+</script>

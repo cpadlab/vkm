@@ -1,0 +1,12 @@
+/*
+      _         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+*/
+
+.ac-banner h1,.aca-cancel,.aca-confirm,.aca-input,.aca-toggle{margin-left:.5em}#return-vault-btn,#return-vault-btn label,.aca-common{cursor:pointer;transition:var(--transition-simple)}#account-nav button,#return-vault-btn,#return-vault-btn label,.ac-actions,.aca-common,.aca-toggle i{transition:var(--transition-simple)}.ac-banner{display:flex;align-items:center;max-width:10em}.ac-banner img{width:5em;height:5em;padding:.5em;background:#fff;border-radius:10px}.ac-banner h1{font-size:2rem;line-height:1em;font-weight:700}.ac-banner h1 span{font-size:1.5rem;font-weight:400}.ac-actions{position:relative}#account-content{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%)}.aca-delete-hidden,.aca-password-hidden,.aca-username-hidden{display:inline;opacity:0;pointer-events:none;transform:var(--transition-simple)}.aca-toggle{background:0 0;border:1px solid var(--text)}.aca-toggle:hover i{color:var(--primary)}.aca-confirm{background:var(--primary);border:1px solid var(--primary)}.aca-action,.aca-cancel{border:1px solid var(--text);background:0 0}.aca-cancel{color:var(--text)}.aca-confirm:hover{box-shadow:0 20px 80px -10px var(--primary)}#aca-delete-action:hover,.aca-cancel:hover{background:#bb2020}#return-vault-btn:hover label,.aca-action:hover{background:var(--primary)}.aca-common,.aca-input{height:2em;border-radius:5px;color:var(--text)}.aca-action:hover{box-shadow:0 20px 80px -10px var(--text)}.aca-action:disabled,.aca-confirm:disabled{opacity:.7;cursor:not-allowed}.aca-common{font-weight:700}.aca-input{background:0 0;border:1px solid var(--text);padding:0 0 0 1em}.aca-delete,.aca-export,.aca-password,.aca-username{margin-top:1em}#return-vault-btn{background:0 0;padding:0;margin-top:2em;border:none;color:var(--text);margin-bottom:1em}#return-vault-btn label{margin-left:.5em;font-weight:700;border-radius:5px;padding:.5em}#login-error{position:absolute;left:50%;transform:translateX(-50%);bottom:1em}.text-correct{color:#31a67c}.aca-delete p,.text-incorrect{color:#bb2020}.aca-delete p{display:none}#account-nav{position:absolute;top:1em;left:1em;display:flex;gap:1em;align-items:center}#account-nav img{width:5em}#account-nav button{padding:.5em 1em;background:0 0;border:1px solid var(--text);border-radius:5px;height:3em;color:var(--text)}

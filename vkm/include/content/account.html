@@ -1,0 +1,70 @@
+<!--   
+      _                         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+-->
+
+<link rel="stylesheet" href="vkm/include/style/account.css">
+
+<nav id="account-nav">
+    <img src="vkm/include/assets/logo.png">
+    <button id="timeleft-btn" disabled>15:00 <i class="fa-regular fa-clock"></i></button>
+</nav>
+
+<section id="account-content">
+
+    <div class="ac-banner">
+        <img src="vkm/include/assets/account.png">
+        <h1>Welcome <span id="acb-span"></span></h1>
+    </div>
+
+    <div class="ac-actions">
+        
+        <div class="aca-username">
+            <button id="aca-username-action" class="aca-action aca-common">Change Username</button>
+            <div class="aca-username-hidden" id="aca-username-hidden">
+                <input type="text" id="aca-username-input" class="aca-input" placeholder="New Username">
+                <button id="aca-username-cancel" class="aca-cancel aca-common">Cancel</button>
+                <button id="aca-username-confirm" class="aca-confirm aca-common" disabled>Confirm</button>
+            </div>
+        </div>
+
+        <div class="aca-password">
+            <button id="aca-password-action" class="aca-action aca-common">Change Password</button>
+            <div class="aca-password-hidden" id="aca-password-hidden">
+                <input type="password" id="aca-password-input" class="aca-input" placeholder="New Password">
+                <button id="togglePasswordVisibility" class="aca-toggle aca-common"><i class="fa-solid fa-eye"></i></button>
+                <button id="aca-password-cancel" class="aca-cancel aca-common">Cancel</button>
+                <button id="aca-password-confirm" class="aca-confirm aca-common" disabled>Confirm</button>
+            </div>
+        </div>
+
+        <div class="aca-export">
+            <button id="aca-export-action" class="aca-action aca-common">Export Passwords</button>
+        </div>
+
+        <div class="aca-delete">
+            <p id="aca-delete-text"><i class="fa-solid fa-triangle-exclamation"></i> <b>Are you sure you want to delete the account?</b> <br><i class="fa-solid fa-skull-crossbones"></i> This action has no return, all your passwords will<br>be deleted and you will not be able to recover them again.</p> 
+            <button id="aca-delete-action" class="aca-action aca-common">Delete Account</button>
+            <div class="aca-delete-hidden" id="aca-delete-hidden">
+                <input type="delete" id="aca-delete-input" class="aca-input" placeholder="Write your Username">
+                <button id="aca-delete-cancel" class="aca-cancel aca-common">Cancel</button>
+                <button id="aca-delete-confirm" class="aca-confirm aca-common" disabled>Confirm</button>
+            </div>
+        </div>
+
+        <button id="return-vault-btn"><i class="fa-solid fa-caret-left"></i> <label>Return to the vault</label></button>
+
+    </div>
+
+</section>
+
+<p id="login-error"></p>
+
+<script type="module" src="vkm/include/scripts/account.js"></script>
+

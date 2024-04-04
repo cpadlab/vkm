@@ -1,0 +1,12 @@
+/*
+      _         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+*/
+
+#mrf-info,#mrf-submit,#ri-close,.m-register-form .mrf-div button{color:var(--text);transition:var(--transition-simple);cursor:pointer}#register-info,register main{position:absolute;left:50%;transform:translate(-50%,-50%)}register main{top:40%;text-align:center}register main img{width:6em}.m-register-form{position:relative}.m-register-form .mrf-div{display:flex;width:15em;margin-top:1em;border:1px solid var(--text);border-radius:5px}.m-register-form .mrf-div:first-child{margin-top:unset}.m-register-form .mrf-div input{flex:1;border:0;margin-left:.5em;background:0 0;height:2em;margin-right:.5em;color:var(--text)}.m-register-form .mrf-div button{border:0;background:0 0}#mrf-info:hover,.m-register-form div button:hover{color:var(--primary)}.m-register-form div:first-child input{margin-right:unset}#mrf-info,#mrf-submit{margin-top:1em}#mrf-info{background:0 0;border:none}#mrf-info:disabled,#mrf-submit:disabled,.m-register-form .mrf-div button:disabled{opacity:.8;cursor:not-allowed}#mrf-info:disabled:hover,.m-register-form .mrf-div button:disabled:hover{color:unset}.m-register-form .mrf-div input:disabled:hover{cursor:not-allowed}#mrf-submit,#ri-close{background:var(--primary);border:0;padding:.5em 2em;font-weight:700;border-radius:5px;margin-left:.5em}#mrf-submit:hover,#ri-close:hover{transform:translate(0,-1px);box-shadow:0 20px 80px -10px var(--primary)}#mrf-submit:disabled:hover{transform:unset;box-shadow:unset}#register-error{position:absolute;left:50%;transform:translateX(-50%);bottom:1em}#register-info{background:var(--text);color:var(--background);top:70%;opacity:0;z-index:1111;display:flex;flex-direction:column;padding:1em;border-radius:10px;box-shadow:0 20px 80px -10px var(--primary-5);max-width:25em;width:auto}#register-info *{margin:0}#register-info button,#register-info h2,#register-info p,#register-info ul{margin-top:.5em;margin-bottom:.5em}.text-correct{color:#31a67c}.text-incorrect{color:#bb2020}#mlf-goLog{font-size:.9rem;cursor:pointer}

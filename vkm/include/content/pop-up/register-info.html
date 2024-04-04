@@ -1,0 +1,47 @@
+<!--   
+      _                         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+-->
+
+<div class="black-layer"></div>
+
+<div id="register-info">
+
+    <h2>How to Create Passwords?</h2>
+
+    <p>Characters: 8 > & 30 <</p>
+    <p>Minimums:</p>
+    <ul>
+        <li>1 Uppercase</li>
+        <li>1 Lowercase</li>
+        <li>1 Number</li>
+        <li>1 Special</li>
+    </ul>
+
+    <button id="ri-close">Close</button>
+
+</div>
+
+<script>
+    $(function() {
+        
+        $(".black-layer").animate({
+            opacity: 0.5
+        }, 1000);
+
+        $("#register-info").animate({
+            top: '50%',
+            opacity: 1
+        }, 1000);
+
+    });
+
+    function removeInfo() {$('.host-info').empty();}
+    document.getElementById('ri-close').addEventListener('click', removeInfo);
+</script>

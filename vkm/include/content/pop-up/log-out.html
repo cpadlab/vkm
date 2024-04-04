@@ -1,0 +1,43 @@
+<!--   
+      _                         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+-->
+
+<div class="black-layer"></div>
+
+<div id="logout-div">
+    <i class="fa-solid fa-bell"></i>
+    <p id="logout-p"> Your session has ended. Click on close to log in again.</p>
+    <button id="ed-close">Close</button>
+</div>
+
+<script type="module">
+    import { deleteCookie } from './vkm/include/scripts/cookies.js';
+
+    deleteCookie('session');
+
+    $(function() {
+        
+        $(".black-layer").animate({
+            opacity: 0.5
+        }, 1000);
+
+        $("#logout-div").animate({
+            top: '50%',
+            opacity: 1
+        }, 1000);
+
+    });
+
+    function logoutAction() {
+        deleteCookie('time');window.location.reload();
+    }
+
+    document.getElementById('ed-close').addEventListener('click', logoutAction);
+</script>

@@ -1,0 +1,47 @@
+<!--   
+      _                         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+-->
+
+<link rel="stylesheet" href="vkm/include/style/login.css">
+
+<p class="vkm-info">VKM v6.0</p>
+
+<div class="host-info"></div>
+
+<main id="main-login">
+
+    <img src="vkm/include/assets/logo.png" alt="VKM Logo">
+
+    <h1>Login</h1>
+
+    <div class="m-login-form">
+
+        <div class="mlf-div">
+            <input id="usernameInput" type="text" placeholder="Username">
+        </div>
+
+        <div class="mlf-div">
+            <input id="passwordInput" type="password" placeholder="Password">
+            <button id="togglePasswordVisibility"><i class="fa-solid fa-eye"></i></button>
+        </div>
+
+        <p id="mlf-goReg">Don't have an account? Register</p>
+        
+        <div class="mlf-last-row">
+            <input id="mlf-submit" type="submit" value="Login" disabled>
+        </div>
+
+    </div>
+
+</main>
+
+<p id="login-error"></p>
+
+<script type="module" src="vkm/include/scripts/login.js"></script>

@@ -1,0 +1,12 @@
+/*
+      _         
+ __ _| |___ __  
+ \ V / / / '  \  v6.0
+  \_/|_\_\_|_|_|
+
+VKM v6.0
+Author: Carlos Padilla (cpadlab)
+Proyect: https://github.com/cpadlab/vkm
+*/
+
+@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/regular.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/black.ttf') format('truetype');font-weight:900;font-style:normal}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/blackItalic.ttf') format('truetype');font-weight:900;font-style:italic}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/bold.ttf') format('truetype');font-weight:700;font-style:normal}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/boldItalic.ttf') format('truetype');font-weight:700;font-style:italic}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/italic.ttf') format('truetype');font-weight:400;font-style:italic}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/light.ttf') format('truetype');font-weight:300;font-style:normal}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/lightItalic.ttf') format('truetype');font-weight:300;font-style:italic}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/medium.ttf') format('truetype');font-weight:500;font-style:normal}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/mediumItalic.ttf') format('truetype');font-weight:500;font-style:italic}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/thin.ttf') format('truetype');font-weight:100;font-style:normal}@font-face{font-family:Roboto;src:url('../lib/fonts/roboto/thinItalic.ttf') format('truetype');font-weight:100;font-style:italic}
