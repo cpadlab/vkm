@@ -75,7 +75,7 @@ python vkm.py  # You can also use --start
 
 Welcome to the vkm registration page! Enter your username and password for your new account and ...
 
-![Register Page](screenshots\register-page.png)
+![Register Page](https://github.com/cpadlab/vkm/blob/master/screenshots/register-page.png)
 
 Please read the warnings carefully in order to create a secure password and create your account.
 
