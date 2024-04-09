@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="VKM",
-    version="6.0.0",
+    version="6.1",
     author="Carlos Padilla Labella",
     author_email="cpadlab@proton.me",
     description="A self-hosted indie password manager",

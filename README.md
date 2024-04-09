@@ -1,10 +1,12 @@
-# Welcome to VKM
+# Welcome to VKM 6.1
 
 **VKM** (*VaultKeyManager*) is a **personal project** that I started in November 2021 when I was just starting to learn how to program. It was my first project and over time it has become my personal challenge to make it more professional and secure. 
 
 **But... What is VKM?** VKM is a **self-hosted password manager** with an **intuitive web interface** programmed in `Python` and `JS` using `FastApi` and `Jquery` technologies.
 
 # VKMv6 has been released!
+
+*Note: VKM has been updated to version 6.1.* [*Want to see what's new?*](https://github.com/cpadlab/vkm/releases/tag/V6.1)
 
 The sixth version of vkm is packed with changes and improvements. For version 6.0, vkm has been **reprogrammed** from scratch, to bring a **new web redesign**, **more features**, **security** and a cleaner code and better structure for all those who want to contribute to this *small project*.
 
@@ -38,8 +40,6 @@ The sixth version of vkm is packed with changes and improvements. For version 6.
       - Now you **can export all your account passwords** as a `.csv` file. The format/header of your file is: `['code', 'name', 'url', 'password', 'username', 'favorite', 'color', 'group']`
 3. **The new graphical interface**
    - VKM brings a new, **more intuitive** and **complete** graphical interface. Using the vkm colors, it now brings **more customization**, **better organization** and a **cleaner** and more complete vault aesthetics. You can get to know it by looking at the "How to use it" section.
-
-*A changelog has been re-created. It has been reset for this new era of VKM.*
 
 What would you like to see in the future? [Open an Issue](https://github.com/cpadlab/vkm/issues)
 

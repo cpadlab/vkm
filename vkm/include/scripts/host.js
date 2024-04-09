@@ -1,15 +1,15 @@
 /*
       _         
  __ _| |___ __  
- \ V / / / '  \  v6.0
+ \ V / / / '  \  v6.1
   \_/|_\_\_|_|_|
 
-VKM v6.0
+VKM v6.1
 Author: Carlos Padilla (cpadlab)
 Proyect: https://github.com/cpadlab/vkm
 */
 
-import { setError } from './error.js';
+import { setError } from './pop-up/error.js';
 
 export function hostRegister() {$('register').load('vkm/include/content/register.html', function() {});}
 export function hostLogin() {$('login').load('vkm/include/content/login.html', function() {});}

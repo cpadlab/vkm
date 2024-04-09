@@ -1,10 +1,10 @@
 /*
       _         
  __ _| |___ __  
- \ V / / / '  \  v6.0
+ \ V / / / '  \  v6.1
   \_/|_\_\_|_|_|
 
-VKM v6.0
+VKM v6.1
 Author: Carlos Padilla (cpadlab)
 Proyect: https://github.com/cpadlab/vkm
 */
@@ -14,7 +14,7 @@ import { createCookie, deleteCookie } from './cookies.js';
 import { requestGet, faFuncs } from './requests.js';
 import { updatePageURL, getParameterValue, deleteParamURL } from './url.js';
 import { hostRegister, hostLogin, hostVault, hostAccount } from './host.js';
-import { createNotification } from './notification.js';
+import { createNotification } from './pop-up/notification.js';
 
 function decodeURLString(urlString) {return decodeURIComponent(urlString.replace(/\+/g, ' '));}
 
