@@ -1,9 +1,9 @@
 #        _                         
 #   __ _| |___ __  
-#   \ V / / / '  \  v6.0
+#   \ V / / / '  \  v6.1
 #   \_/|_\_\_|_|_|
 # 
-# VKM v6.0
+# VKM v6.1
 # Author: Carlos Padilla (cpadlab)
 # Proyect: https://github.com/cpadlab/vkm
 
@@ -94,7 +94,7 @@ class FAFuncs:
     def modifyGroup(cookie:str, old:str, new:str, color:str):
         
         sq = SQLite3();result = SQLite3.Group.modify(self=sq, cookie=cookie, 
-            newgroupname=new, oldgroupname=old, newcolor=old
+            newgroupname=new, oldgroupname=old, newcolor=color
         )
         
         if result[0] == True:rjson = {'success': True}

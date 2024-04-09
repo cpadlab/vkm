@@ -1,9 +1,9 @@
 #        _                         
 #   __ _| |___ __  
-#   \ V / / / '  \  v6.0
+#   \ V / / / '  \  v6.1
 #   \_/|_\_\_|_|_|
 # 
-# VKM v6.0
+# VKM v6.1
 # Author: Carlos Padilla (cpadlab)
 # Proyect: https://github.com/cpadlab/vkm
 
@@ -241,10 +241,14 @@ class SQLite3:
             if SQLite3.Group.check(self=self, username=username, groupname=oldgroupname)[0] == False:return False, 'The group does not exist.'
             
             try:
-                self.c.execute(f"UPDATE vkm_{username}_groups SET group_color = ? WHERE group_name = ?",
-                    (newcolor, oldgroupname))
-                self.c.execute(f"UPDATE vkm_{username}_groups SET group_name = ? WHERE group_name = ?",
-                    (newgroupname, oldgroupname))
+                self.c.execute(f"UPDATE vkm_{username}_groups SET group_color = ?, group_name = ? WHERE group_name = ?",
+                    (newcolor, newgroupname, oldgroupname));self.conn.commit()
+
+                self.c.execute(f'''UPDATE vkm_{username}_keys 
+                   SET group_color = ?, group_name = ? 
+                   WHERE group_name = ?''', 
+               (newcolor, newgroupname, oldgroupname))
+
                 self.conn.commit();self.conn.close();return True, 
             except sqlite3.Error as e:return False, e
 

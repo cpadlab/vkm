@@ -6,59 +6,18 @@
 
 **What's new?**
 
-1. **Performance**
+1. **Bug Fixes**
+  - When any parameter of the group was modified, the colour of the group was corrupted. 
+  - When the name of the group was changed, it did not update its keys correctly, so it did not allow them to be displayed.
 
-2. **Visual Aspects**
+2. **Performance**
+
+3. **Visual Aspects**
    - **Opacity layers** have been **fixed** to better differentiate between notification and emergency pop-ups.
    - A **favicon** (`png`) has been **added** to the web server.
 
-3. **New File Structure**
+4. **New File Structure**
    - The entire **structure** of `vkm/include/content/*` and `vkm/include/scripts/*` has been **modified** to make the source code easier to read.
-   - Presented the table of modifications of the path and file name of the folder content:
-
-| Before | After |
-| ------ | ----- |
-| `content/vault/0-groups.html` | `content/vault/group/none.htm` |
-| `content/vault/create-group.html` | `content/vault/group/create.htm` |
-| `content/vault/delete-group.html` | `content/vault/group/delete.html` |
-| `content/vault/create-key.html` | `content/vault/key/create.html` |
-| `content/vault/delete-key.html` | `content/vault/key/delete.html` |
-| `content/vault/modify-group.html` | `content/vault/group/modify.html` |
-| `content/vault/modify-key.html` | `content/vault/key/modify.html` |
-| `content/vault/navbar.html` | `content/vault/other/navbar.html` |
-| `content/vault/section-1.html` | `content/vault/other/section-1.html` |
-| `content/vault/section-2.html` | `content/vault/other/section-2.html` |
-| `content/vault/section-3.html` | `content/vault/other/section-3.html` |
-| `content/vault/view-key.html` | `content/vault/key/view.html` |
-
-  - Presented the table of modifications of the path and file name of the folder scripts:
-  
-| Before | After |
-| ------ | ----- |
-| `vkm/include/scripts/error.js` | `vkm/include/scripts/pop-up/error.js` |
-| `vkm/include/scripts/notification.js` | `vkm/include/scripts/pop-up/notification.js` |
-| `vkm/include/scripts/generate.js` | `vkm/include/scripts/other/generate.js` |
-| `vkm/include/scripts/clock.js` | `vkm/include/scripts/other/clock.js` |
-| `vkm/include/scripts/account.js` | `vkm/include/scripts/pages/account.js` |
-| `vkm/include/scripts/login.js` | `vkm/include/scripts/pages/login.js` |
-| `vkm/include/scripts/register.js` | `vkm/include/scripts/pages/register.js` |
-| `vkm/include/scripts/vault.js` | `vkm/include/scripts/pages/vault.js` |
-| `vkm/include/scripts/vault/group/create.js` | `vkm/include/scripts/vault/create-group.js` |
-| `vkm/include/scripts/vault/group/delete.js` | `vkm/include/scripts/vault/delete-group.js` |
-| `vkm/include/scripts/vault/group/modify.js` | `vkm/include/scripts/vault/modify-group.js` |
-| `vkm/include/scripts/vault/key/create.js` | `vkm/include/scripts/vault/create-key.js` |
-| `vkm/include/scripts/vault/key/delete.js` | `vkm/include/scripts/vault/key-delete.js` |
-| `vkm/include/scripts/vault/key/key.js` | `vkm/include/scripts/vault/key.js` |
-| `vkm/include/scripts/vault/key/modify.js` | `vkm/include/scripts/vault/modify-key.js` |
-| `vkm/include/scripts/vault/key/view.js` | `vkm/include/scripts/vault/view-key.js` |
-| `vkm/include/scripts/vault/other/navbar.js` | `vkm/include/scripts/vault/navbar.js` |
-| `vkm/include/scripts/vault/other/toggle.js` | `vkm/include/scripts/vault/toggle.js` |
-| `vkm/include/scripts/vault/sections/section-1.js` | `vkm/include/scripts/vault/section-1.js` |
-| `vkm/include/scripts/vault/sections/section-2.js` | `vkm/include/scripts/vault/section-2.js` |
-| `vkm/include/scripts/vault/sections/section-3.js` | `vkm/include/scripts/vault/section-3.js` |
-
-FALTA ARREGLAR EL BUG DE MODIFICAR EL GRUPO
-REVISAR TODO EL CÓDIGO DUPLICADO, BUSCAR SOLUCIONES
 
 ## [6.0]() (2024-04-04)
 
