@@ -10,13 +10,11 @@
    - When any parameter of the group was modified, the colour of the group was corrupted. 
    - When the name of the group was changed, it did not update its keys correctly, so it did not allow them to be displayed.
 
-2. **Performance**
-
-3. **Visual Aspects**
+2. **Visual Aspects**
    - **Opacity layers** have been **fixed** to better differentiate between notification and emergency pop-ups.
    - A **favicon** (`png`) has been **added** to the web server.
 
-4. **New File Structure**
+3. **New File Structure**
    - The entire **structure** of `vkm/include/content/*` and `vkm/include/scripts/*` has been **modified** to make the source code easier to read.
 
 ## [6.0]() (2024-04-04)
