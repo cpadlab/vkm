@@ -7,8 +7,8 @@
 **What's new?**
 
 1. **Bug Fixes**
-  - When any parameter of the group was modified, the colour of the group was corrupted. 
-  - When the name of the group was changed, it did not update its keys correctly, so it did not allow them to be displayed.
+   - When any parameter of the group was modified, the colour of the group was corrupted. 
+   - When the name of the group was changed, it did not update its keys correctly, so it did not allow them to be displayed.
 
 2. **Performance**
 
